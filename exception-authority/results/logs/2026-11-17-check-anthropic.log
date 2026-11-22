@@ -1,0 +1,156 @@
+# Log of scripts/run_check_anthropic.sh 2.75 5.00 7.50, run 17 Nov 2026 (19:35-19:39 UTC) through a copy that adds --yes to each paid command (the run was approved; see run_check_anthropic_yes.sh here). Copied from the session scratchpad; the absolute repository prefix was replaced by a relative path, nothing else changed.
+stage check: One scenario per domain x direction on real models (54 items each; Sonnet is here only so the panel decision can use its health and token counts). Looks for request errors, rejected parameters, refusals, truncation, parse failures, served hosts and token counts, not effects. Not study data.
+feed protocol: prefill
+claude-haiku-5-5: 54 done, 0 to run
+claude-sonnet-5-5: 0 done, 54 to run
+claude-opus-5-5: 1 done, 53 to run
+model                 items  est. $/item  worst $/item  est. total  basis
+claude-haiku-5-5          0      0.00022       0.00000       $0.00  mean of 57 logged rows
+claude-sonnet-5-5        54      0.02185       0.04390       $1.18  no logs yet: high default (2000 output tokens)
+claude-opus-5-5          53      0.04371       0.08780       $2.32  no logs yet: high default (2000 output tokens)
+estimated spend: $3.50   worst case if every reply hit max_tokens: $7.02
+ANTHROPIC_API_KEY: found (value not shown)
+dry run: nothing was sent.
+stage check: One scenario per domain x direction on real models (54 items each; Sonnet is here only so the panel decision can use its health and token counts). Looks for request errors, rejected parameters, refusals, truncation, parse failures, served hosts and token counts, not effects. Not study data.
+feed protocol: prefill
+claude-haiku-5-5: 54 done, 0 to run
+model                 items  est. $/item  worst $/item  est. total  basis
+claude-haiku-5-5          0      0.00022       0.00000       $0.00  mean of 57 logged rows
+estimated spend: $0.00   worst case if every reply hit max_tokens: $0.00   hard cap: $2.75
+next: python scripts/04_health_check.py check
+claude-haiku-5-5: 54/54 done, 0 error lines logged, $0.0118
+  tokens in: median 1014, max 1038; out: median 218, max 514
+  served model(s): claude-haiku-5-5 (54)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 7/54
+CLEAN: stage check has no protocol problems.
+stage check: One scenario per domain x direction on real models (54 items each; Sonnet is here only so the panel decision can use its health and token counts). Looks for request errors, rejected parameters, refusals, truncation, parse failures, served hosts and token counts, not effects. Not study data.
+feed protocol: prefill
+claude-sonnet-5-5: 0 done, 54 to run
+model                 items  est. $/item  worst $/item  est. total  basis
+claude-sonnet-5-5        54      0.02185       0.04390       $1.18  no logs yet: high default (2000 output tokens)
+estimated spend: $1.18   worst case if every reply hit max_tokens: $2.37   hard cap: $2.75
+claude-sonnet-5-5: running 54 requests (54 items) with 4 workers
+  claude-sonnet-5-5: 10/54 items, 0 errors, $0.0281, 0.1 min
+  claude-sonnet-5-5: 20/54 items, 0 errors, $0.0522, 0.1 min
+  claude-sonnet-5-5: 30/54 items, 0 errors, $0.0798, 0.2 min
+  claude-sonnet-5-5: 40/54 items, 0 errors, $0.1069, 0.3 min
+  claude-sonnet-5-5: 50/54 items, 0 errors, $0.1365, 0.4 min
+claude-sonnet-5-5: 54 ok, 0 errors, 0 not started; 54,022 tokens in, 4,038 out, about $0.1484
+spend this command: about $0.1484 of a $2.75 cap (ledger: ../says-controls/results/spend-ledger.jsonl)
+next: python scripts/04_health_check.py check
+claude-haiku-5-5: 54/54 done, 0 error lines logged, $0.0118
+  tokens in: median 1014, max 1038; out: median 218, max 514
+  served model(s): claude-haiku-5-5 (54)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 7/54
+claude-sonnet-5-5: 54/54 done, 0 error lines logged, $0.1484
+  tokens in: median 1014, max 1038; out: median 68, max 248
+  served model(s): claude-sonnet-5-5 (54)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/54
+CLEAN: stage check has no protocol problems.
+stage check: One scenario per domain x direction on real models (54 items each; Sonnet is here only so the panel decision can use its health and token counts). Looks for request errors, rejected parameters, refusals, truncation, parse failures, served hosts and token counts, not effects. Not study data.
+feed protocol: prefill
+claude-opus-5-5: 1 done, 1 to run
+model                 items  est. $/item  worst $/item  est. total  basis
+claude-opus-5-5           1      0.04384       0.08769       $0.04  no logs yet: high default (2000 output tokens)
+estimated spend: $0.04   worst case if every reply hit max_tokens: $0.09   hard cap: $5.00
+claude-opus-5-5: running 1 requests (1 items) with 4 workers
+claude-opus-5-5: 1 ok, 0 errors, 0 not started; 1,030 tokens in, 66 out, about $0.0054
+spend this command: about $0.0054 of a $5.00 cap (ledger: ../says-controls/results/spend-ledger.jsonl)
+next: python scripts/04_health_check.py check
+stage check: One scenario per domain x direction on real models (54 items each; Sonnet is here only so the panel decision can use its health and token counts). Looks for request errors, rejected parameters, refusals, truncation, parse failures, served hosts and token counts, not effects. Not study data.
+feed protocol: prefill
+claude-opus-5-5: 2 done, 52 to run
+model                 items  est. $/item  worst $/item  est. total  basis
+claude-opus-5-5          52      0.04370       0.08780       $2.27  no logs yet: high default (2000 output tokens)
+estimated spend: $2.27   worst case if every reply hit max_tokens: $4.57   hard cap: $5.00
+claude-opus-5-5: running 52 requests (52 items) with 4 workers
+  claude-opus-5-5: 10/52 items, 0 errors, $0.0527, 0.1 min
+  claude-opus-5-5: 20/52 items, 0 errors, $0.1111, 0.2 min
+  claude-opus-5-5: 30/52 items, 0 errors, $0.1644, 0.2 min
+  claude-opus-5-5: 40/52 items, 0 errors, $0.2230, 0.3 min
+  claude-opus-5-5: 50/52 items, 0 errors, $0.2814, 0.4 min
+claude-opus-5-5: 52 ok, 0 errors, 0 not started; 51,969 tokens in, 4,309 out, about $0.2941
+spend this command: about $0.2941 of a $5.00 cap (ledger: ../says-controls/results/spend-ledger.jsonl)
+next: python scripts/04_health_check.py check
+claude-haiku-5-5: 54/54 done, 0 error lines logged, $0.0118
+  tokens in: median 1014, max 1038; out: median 218, max 514
+  served model(s): claude-haiku-5-5 (54)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 7/54
+claude-sonnet-5-5: 54/54 done, 0 error lines logged, $0.1484
+  tokens in: median 1014, max 1038; out: median 68, max 248
+  served model(s): claude-sonnet-5-5 (54)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/54
+claude-opus-5-5: 54/54 done, 0 error lines logged, $0.3048
+  tokens in: median 1014, max 1038; out: median 73, max 220
+  served model(s): claude-opus-5-5 (54)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/54
+CLEAN: stage check has no protocol problems.
+stage check-implicit: Protocol check for the implicit-rule arm (54 items each, Anthropic models only). Same checks as 'check'; not data.
+feed protocol: prefill
+claude-haiku-5-5: 0 done, 54 to run
+claude-sonnet-5-5: 0 done, 54 to run
+claude-opus-5-5: 0 done, 54 to run
+model                 items  est. $/item  worst $/item  est. total  basis
+claude-haiku-5-5         54      0.00022       0.00219       $0.01  mean of 57 logged rows
+claude-sonnet-5-5        54      0.00275       0.04377       $0.15  mean of 54 logged rows
+claude-opus-5-5          54      0.00564       0.08754       $0.30  mean of 54 logged rows
+estimated spend: $0.46   worst case if every reply hit max_tokens: $7.21   hard cap: $7.50
+claude-haiku-5-5: running 54 requests (54 items) with 4 workers
+  claude-haiku-5-5: 10/54 items, 0 errors, $0.0015, 0.1 min
+  claude-haiku-5-5: 20/54 items, 0 errors, $0.0036, 0.2 min
+  claude-haiku-5-5: 30/54 items, 0 errors, $0.0057, 0.2 min
+  claude-haiku-5-5: 40/54 items, 0 errors, $0.0075, 0.3 min
+  claude-haiku-5-5: 50/54 items, 0 errors, $0.0093, 0.4 min
+claude-haiku-5-5: 54 ok, 0 errors, 0 not started; 52,510 tokens in, 10,071 out, about $0.0103
+claude-sonnet-5-5: running 54 requests (54 items) with 4 workers
+  claude-sonnet-5-5: 10/54 items, 0 errors, $0.0244, 0.1 min
+  claude-sonnet-5-5: 20/54 items, 0 errors, $0.0540, 0.2 min
+  claude-sonnet-5-5: 30/54 items, 0 errors, $0.0804, 0.2 min
+  claude-sonnet-5-5: 40/54 items, 0 errors, $0.1068, 0.3 min
+  claude-sonnet-5-5: 50/54 items, 0 errors, $0.1373, 0.4 min
+claude-sonnet-5-5: 54 ok, 0 errors, 0 not started; 52,510 tokens in, 4,234 out, about $0.1474
+claude-opus-5-5: running 54 requests (54 items) with 4 workers
+  claude-opus-5-5: 10/54 items, 0 errors, $0.0605, 0.1 min
+  claude-opus-5-5: 20/54 items, 0 errors, $0.1213, 0.2 min
+  claude-opus-5-5: 30/54 items, 0 errors, $0.1913, 0.3 min
+  claude-opus-5-5: 40/54 items, 0 errors, $0.2480, 0.4 min
+  claude-opus-5-5: 50/54 items, 0 errors, $0.3053, 0.5 min
+claude-opus-5-5: 54 ok, 0 errors, 0 not started; 52,510 tokens in, 6,376 out, about $0.3376
+spend this command: about $0.4952 of a $7.50 cap (ledger: ../says-controls/results/spend-ledger.jsonl)
+next: python scripts/04_health_check.py check-implicit
+claude-haiku-5-5: 54/54 done, 0 error lines logged, $0.0103
+  tokens in: median 986, max 1010; out: median 163, max 527
+  served model(s): claude-haiku-5-5 (54)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 1/54
+claude-sonnet-5-5: 54/54 done, 0 error lines logged, $0.1474
+  tokens in: median 986, max 1010; out: median 54, max 396
+  served model(s): claude-sonnet-5-5 (54)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/54
+claude-opus-5-5: 54/54 done, 0 error lines logged, $0.3376
+  tokens in: median 986, max 1010; out: median 76, max 377
+  served model(s): claude-opus-5-5 (54)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 4/54
+CLEAN: stage check-implicit has no protocol problems.
+warning: stage 'main' runs only on the frozen protocol: no FROZEN.json: run `python scripts/03_freeze_protocol.py` after reviewing PREREG.md
+stage main: The reported study (PREREG.md sections 3-4).
+feed protocol: prefill; prompt caching on for the Claude models
+claude-haiku-5-5: 0 done, 3240 to run (3 samples per item)
+claude-opus-5-5: 0 done, 3240 to run (3 samples per item)
+model                 items  est. $/item  worst $/item  est. total  basis
+claude-haiku-5-5       3240      0.00020       0.00224       $0.66  mean of 111 logged rows
+claude-opus-5-5        3240      0.00595       0.08980      $19.27  mean of 108 logged rows
+estimated spend: $19.93   worst case if every reply hit max_tokens: $298.21
+ANTHROPIC_API_KEY: found (value not shown)
+dry run: nothing was sent.
+Anthropic check done: read about 10 replies, re-estimate from the logged tokens, decide Sonnet and the
+effort level on cost and health only (PREREG changelog), then run the OpenRouter models' check.
+exit 0

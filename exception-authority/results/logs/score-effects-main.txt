@@ -1,0 +1,167 @@
+pre-registered outcomes (PREREG section 1):
+  outside H1's Holm family and prediction F (PREREG section 2): claude-sonnet-5-5
+  claude-haiku-5-5: prediction F (floor breaks) no; lowest cell accuracy 0.758
+  claude-opus-5-5: prediction F (floor breaks) no; lowest cell accuracy 1.000
+  gemini-3.5-flash-lite: prediction F (floor breaks) yes; lowest cell accuracy 0.000
+  gpt-4.1-mini: prediction F (floor breaks) yes; lowest cell accuracy 0.000
+  llama-3.3-70b: prediction F (floor breaks) yes; lowest cell accuracy 0.000
+  qwen3.8-flash: prediction F (floor breaks) yes; lowest cell accuracy 0.000
+  outcome C (ceiling: every cell >= 0.95 for every model): no
+claude-haiku-5-5:
+  acceptance per cell: A 0.242 [0.174, 0.326] n=120, D 0.033 [0.013, 0.083] n=120, B-in 1.000 [0.969, 1.000] n=120, B-out 0.000 [-0.000, 0.031] n=120, R 0.000 [-0.000, 0.031] n=120, R-ctl 0.975 [0.929, 0.991] n=120, C-ok 1.000 [0.969, 1.000] n=120, C-no 0.000 [-0.000, 0.031] n=120, C-ctl 1.000 [0.969, 1.000] n=120
+  C-ctl - C-no: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36, Holm p = 9.028e-36 (primary)
+  R-ctl - R: +0.975 [95% bootstrap +0.942, +1.000], n=120; discordant 117 vs 0, exact McNemar p = 1.204e-35, Holm p = 1.926e-34 (secondary)
+  B-in - B-out: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36, Holm p = 3.611e-35 (secondary)
+  D - A: -0.208 [95% bootstrap -0.283, -0.142], n=120; discordant 0 vs 25, exact McNemar p = 5.96e-08, Holm p = 5.96e-07 (secondary)
+  C-ok - C-no: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36, Holm p = 3.611e-35 (secondary)
+  C-ok - C-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, control: expected near 0
+  B-in - R-ctl: +0.025 [95% bootstrap +0.000, +0.058], n=120; discordant 3 vs 0, exact McNemar p = 0.25, control: expected near 0
+  B-in - A: +0.758 [95% bootstrap +0.683, +0.833], n=120; discordant 91 vs 0, exact McNemar p = 8.078e-28
+  B-in - D: +0.967 [95% bootstrap +0.933, +0.992], n=120; discordant 116 vs 0, exact McNemar p = 2.407e-35
+  B-in - R: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  share (D - A) / (B-in - A): -0.275 [-0.415, -0.165]
+  false acceptance (D, R, C-no): 0.011 (n=360)
+  applicability (B-out): 0.000 (n=120)
+  genuine retention (B-in, R-ctl, C-ok, C-ctl): 0.994 (n=480)
+  permissive: false acceptance (D, R, C-no) 0.000 (n=180); applicability (B-out) 0.000 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 0.988 (n=240)
+  restrictive: false acceptance (D, R, C-no) 0.022 (n=180); applicability (B-out) 0.000 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  paired accuracy C-no / C-ctl: 1.000 [0.969, 1.000] n=120
+  paired accuracy C-no / C-ok: 1.000 [0.969, 1.000] n=120
+  paired accuracy R / R-ctl: 0.975 [0.929, 0.991] n=120
+  paired accuracy B-out / B-in: 1.000 [0.969, 1.000] n=120
+  reliability (exploratory): decision differs between samples on 0.044 of 1080 items
+claude-opus-5-5:
+  acceptance per cell: A 0.000 [-0.000, 0.031] n=120, D 0.000 [-0.000, 0.031] n=120, B-in 1.000 [0.969, 1.000] n=120, B-out 0.000 [-0.000, 0.031] n=120, R 0.000 [-0.000, 0.031] n=120, R-ctl 1.000 [0.969, 1.000] n=120, C-ok 1.000 [0.969, 1.000] n=120, C-no 0.000 [-0.000, 0.031] n=120, C-ctl 1.000 [0.969, 1.000] n=120
+  C-ctl - C-no: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36, Holm p = 9.028e-36 (primary)
+  R-ctl - R: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36, Holm p = 3.611e-35 (secondary)
+  B-in - B-out: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36, Holm p = 3.611e-35 (secondary)
+  D - A: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, Holm p = 1 (secondary)
+  C-ok - C-no: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36, Holm p = 3.611e-35 (secondary)
+  C-ok - C-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, control: expected near 0
+  B-in - R-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, control: expected near 0
+  B-in - A: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  B-in - D: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  B-in - R: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  share (D - A) / (B-in - A): +0.000 [+0.000, +0.000]
+  false acceptance (D, R, C-no): 0.000 (n=360)
+  applicability (B-out): 0.000 (n=120)
+  genuine retention (B-in, R-ctl, C-ok, C-ctl): 1.000 (n=480)
+  permissive: false acceptance (D, R, C-no) 0.000 (n=180); applicability (B-out) 0.000 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  restrictive: false acceptance (D, R, C-no) 0.000 (n=180); applicability (B-out) 0.000 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  paired accuracy C-no / C-ctl: 1.000 [0.969, 1.000] n=120
+  paired accuracy C-no / C-ok: 1.000 [0.969, 1.000] n=120
+  paired accuracy R / R-ctl: 1.000 [0.969, 1.000] n=120
+  paired accuracy B-out / B-in: 1.000 [0.969, 1.000] n=120
+  reliability (exploratory): decision differs between samples on 0.000 of 1080 items
+claude-sonnet-5-5:
+  acceptance per cell: A 0.292 [0.218, 0.378] n=120, D 0.000 [-0.000, 0.031] n=120, B-in 1.000 [0.969, 1.000] n=120, B-out 0.000 [-0.000, 0.031] n=120, R 0.000 [-0.000, 0.031] n=120, R-ctl 1.000 [0.969, 1.000] n=120, C-ok 1.000 [0.969, 1.000] n=120, C-no 0.008 [0.001, 0.046] n=120, C-ctl 1.000 [0.969, 1.000] n=120
+  C-ctl - C-no: +0.992 [95% bootstrap +0.975, +1.000], n=120; discordant 119 vs 0, exact McNemar p = 3.009e-36
+  R-ctl - R: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  B-in - B-out: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  D - A: -0.292 [95% bootstrap -0.375, -0.217], n=120; discordant 0 vs 35, exact McNemar p = 5.821e-11
+  C-ok - C-no: +0.992 [95% bootstrap +0.975, +1.000], n=120; discordant 119 vs 0, exact McNemar p = 3.009e-36
+  C-ok - C-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, control: expected near 0
+  B-in - R-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, control: expected near 0
+  B-in - A: +0.708 [95% bootstrap +0.625, +0.792], n=120; discordant 85 vs 0, exact McNemar p = 5.17e-26
+  B-in - D: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  B-in - R: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  share (D - A) / (B-in - A): -0.412 [-0.600, -0.277]
+  false acceptance (D, R, C-no): 0.003 (n=360)
+  applicability (B-out): 0.000 (n=120)
+  genuine retention (B-in, R-ctl, C-ok, C-ctl): 1.000 (n=480)
+  permissive: false acceptance (D, R, C-no) 0.000 (n=180); applicability (B-out) 0.000 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  restrictive: false acceptance (D, R, C-no) 0.006 (n=180); applicability (B-out) 0.000 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  paired accuracy C-no / C-ctl: 0.992 [0.954, 0.999] n=120
+  paired accuracy C-no / C-ok: 0.992 [0.954, 0.999] n=120
+  paired accuracy R / R-ctl: 1.000 [0.969, 1.000] n=120
+  paired accuracy B-out / B-in: 1.000 [0.969, 1.000] n=120
+  reliability (exploratory): decision differs between samples on 0.019 of 1080 items
+gemini-3.5-flash-lite:
+  acceptance per cell: A 1.000 [0.969, 1.000] n=120, D 1.000 [0.969, 1.000] n=120, B-in 1.000 [0.969, 1.000] n=120, B-out 0.000 [-0.000, 0.031] n=120, R 0.550 [0.461, 0.636] n=120, R-ctl 1.000 [0.969, 1.000] n=120, C-ok 0.983 [0.941, 0.995] n=120, C-no 0.625 [0.536, 0.706] n=120, C-ctl 0.992 [0.954, 0.999] n=120
+  C-ctl - C-no: +0.367 [95% bootstrap +0.283, +0.450], n=120; discordant 44 vs 0, exact McNemar p = 1.137e-13, Holm p = 4.547e-13 (primary)
+  R-ctl - R: +0.450 [95% bootstrap +0.358, +0.542], n=120; discordant 54 vs 0, exact McNemar p = 1.11e-16, Holm p = 1.443e-15 (secondary)
+  B-in - B-out: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36, Holm p = 3.611e-35 (secondary)
+  D - A: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, Holm p = 1 (secondary)
+  C-ok - C-no: +0.358 [95% bootstrap +0.275, +0.442], n=120; discordant 43 vs 0, exact McNemar p = 2.274e-13, Holm p = 2.501e-12 (secondary)
+  C-ok - C-ctl: -0.008 [95% bootstrap -0.042, +0.017], n=120; discordant 1 vs 2, exact McNemar p = 1, control: expected near 0
+  B-in - R-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, control: expected near 0
+  B-in - A: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  B-in - D: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  B-in - R: +0.450 [95% bootstrap +0.358, +0.542], n=120; discordant 54 vs 0, exact McNemar p = 1.11e-16
+  share (D - A) / (B-in - A): nan [nan, nan]
+  false acceptance (D, R, C-no): 0.725 (n=360)
+  applicability (B-out): 0.000 (n=120)
+  genuine retention (B-in, R-ctl, C-ok, C-ctl): 0.994 (n=480)
+  permissive: false acceptance (D, R, C-no) 0.456 (n=180); applicability (B-out) 0.000 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 0.988 (n=240)
+  restrictive: false acceptance (D, R, C-no) 0.994 (n=180); applicability (B-out) 0.000 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  paired accuracy C-no / C-ctl: 0.367 [0.286, 0.456] n=120
+  paired accuracy C-no / C-ok: 0.358 [0.278, 0.447] n=120
+  paired accuracy R / R-ctl: 0.450 [0.364, 0.539] n=120
+  paired accuracy B-out / B-in: 1.000 [0.969, 1.000] n=120
+gpt-4.1-mini:
+  acceptance per cell: A 1.000 [0.969, 1.000] n=120, D 1.000 [0.969, 1.000] n=120, B-in 1.000 [0.969, 1.000] n=120, B-out 0.000 [-0.000, 0.031] n=120, R 1.000 [0.969, 1.000] n=120, R-ctl 1.000 [0.969, 1.000] n=120, C-ok 1.000 [0.969, 1.000] n=120, C-no 1.000 [0.969, 1.000] n=120, C-ctl 1.000 [0.969, 1.000] n=120
+  C-ctl - C-no: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, Holm p = 1 (primary)
+  R-ctl - R: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, Holm p = 1 (secondary)
+  B-in - B-out: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36, Holm p = 3.611e-35 (secondary)
+  D - A: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, Holm p = 1 (secondary)
+  C-ok - C-no: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, Holm p = 1 (secondary)
+  C-ok - C-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, control: expected near 0
+  B-in - R-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, control: expected near 0
+  B-in - A: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  B-in - D: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  B-in - R: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  share (D - A) / (B-in - A): nan [nan, nan]
+  false acceptance (D, R, C-no): 1.000 (n=360)
+  applicability (B-out): 0.000 (n=120)
+  genuine retention (B-in, R-ctl, C-ok, C-ctl): 1.000 (n=480)
+  permissive: false acceptance (D, R, C-no) 1.000 (n=180); applicability (B-out) 0.000 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  restrictive: false acceptance (D, R, C-no) 1.000 (n=180); applicability (B-out) 0.000 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  paired accuracy C-no / C-ctl: 0.000 [-0.000, 0.031] n=120
+  paired accuracy C-no / C-ok: 0.000 [-0.000, 0.031] n=120
+  paired accuracy R / R-ctl: 0.000 [-0.000, 0.031] n=120
+  paired accuracy B-out / B-in: 1.000 [0.969, 1.000] n=120
+llama-3.3-70b:
+  acceptance per cell: A 1.000 [0.969, 1.000] n=120, D 0.992 [0.954, 0.999] n=120, B-in 1.000 [0.969, 1.000] n=120, B-out 0.175 [0.117, 0.253] n=120, R 0.967 [0.917, 0.987] n=120, R-ctl 1.000 [0.969, 1.000] n=120, C-ok 1.000 [0.969, 1.000] n=120, C-no 0.942 [0.884, 0.971] n=120, C-ctl 1.000 [0.969, 1.000] n=120
+  C-ctl - C-no: +0.058 [95% bootstrap +0.025, +0.100], n=120; discordant 7 vs 0, exact McNemar p = 0.01562, Holm p = 0.03125 (primary)
+  R-ctl - R: +0.033 [95% bootstrap +0.008, +0.067], n=120; discordant 4 vs 0, exact McNemar p = 0.125, Holm p = 1 (secondary)
+  B-in - B-out: +0.825 [95% bootstrap +0.758, +0.892], n=120; discordant 99 vs 0, exact McNemar p = 3.155e-30, Holm p = 4.733e-29 (secondary)
+  D - A: -0.008 [95% bootstrap -0.025, +0.000], n=120; discordant 0 vs 1, exact McNemar p = 1, Holm p = 1 (secondary)
+  C-ok - C-no: +0.058 [95% bootstrap +0.017, +0.100], n=120; discordant 7 vs 0, exact McNemar p = 0.01562, Holm p = 0.1406 (secondary)
+  C-ok - C-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, control: expected near 0
+  B-in - R-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1, control: expected near 0
+  B-in - A: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  B-in - D: +0.008 [95% bootstrap +0.000, +0.025], n=120; discordant 1 vs 0, exact McNemar p = 1
+  B-in - R: +0.033 [95% bootstrap +0.008, +0.067], n=120; discordant 4 vs 0, exact McNemar p = 0.125
+  share (D - A) / (B-in - A): nan [nan, nan]
+  false acceptance (D, R, C-no): 0.967 (n=360)
+  applicability (B-out): 0.175 (n=120)
+  genuine retention (B-in, R-ctl, C-ok, C-ctl): 1.000 (n=480)
+  permissive: false acceptance (D, R, C-no) 0.933 (n=180); applicability (B-out) 0.000 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  restrictive: false acceptance (D, R, C-no) 1.000 (n=180); applicability (B-out) 0.350 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  paired accuracy C-no / C-ctl: 0.058 [0.029, 0.116] n=120
+  paired accuracy C-no / C-ok: 0.058 [0.029, 0.116] n=120
+  paired accuracy R / R-ctl: 0.033 [0.013, 0.083] n=120
+  paired accuracy B-out / B-in: 0.825 [0.747, 0.883] n=120
+qwen3.8-flash:
+  acceptance per cell: A 0.992 [0.954, 0.999] n=120, D 1.000 [0.969, 1.000] n=120, B-in 0.992 [0.954, 0.999] n=120, B-out 0.000 [-0.000, 0.031] n=120, R 0.533 [0.444, 0.620] n=120, R-ctl 1.000 [0.969, 1.000] n=120, C-ok 0.992 [0.954, 0.999] n=120, C-no 0.542 [0.453, 0.628] n=120, C-ctl 0.842 [0.766, 0.896] n=120
+  C-ctl - C-no: +0.300 [95% bootstrap +0.225, +0.383], n=120; discordant 36 vs 0, exact McNemar p = 2.91e-11, Holm p = 8.731e-11 (primary)
+  R-ctl - R: +0.467 [95% bootstrap +0.375, +0.558], n=120; discordant 56 vs 0, exact McNemar p = 2.776e-17, Holm p = 3.886e-16 (secondary)
+  B-in - B-out: +0.992 [95% bootstrap +0.975, +1.000], n=120; discordant 119 vs 0, exact McNemar p = 3.009e-36, Holm p = 5.116e-35 (secondary)
+  D - A: +0.008 [95% bootstrap +0.000, +0.025], n=120; discordant 1 vs 0, exact McNemar p = 1, Holm p = 1 (secondary)
+  C-ok - C-no: +0.450 [95% bootstrap +0.358, +0.542], n=120; discordant 55 vs 1, exact McNemar p = 1.582e-15, Holm p = 1.898e-14 (secondary)
+  C-ok - C-ctl: +0.150 [95% bootstrap +0.083, +0.225], n=120; discordant 19 vs 1, exact McNemar p = 4.005e-05, control: expected near 0
+  B-in - R-ctl: -0.008 [95% bootstrap -0.025, +0.000], n=120; discordant 0 vs 1, exact McNemar p = 1, control: expected near 0
+  B-in - A: +0.000 [95% bootstrap -0.025, +0.025], n=120; discordant 1 vs 1, exact McNemar p = 1
+  B-in - D: -0.008 [95% bootstrap -0.025, +0.000], n=120; discordant 0 vs 1, exact McNemar p = 1
+  B-in - R: +0.458 [95% bootstrap +0.367, +0.550], n=120; discordant 56 vs 1, exact McNemar p = 8.049e-16
+  share (D - A) / (B-in - A): nan [+1.000, +3.000]
+  false acceptance (D, R, C-no): 0.692 (n=360)
+  applicability (B-out): 0.000 (n=120)
+  genuine retention (B-in, R-ctl, C-ok, C-ctl): 0.956 (n=480)
+  permissive: false acceptance (D, R, C-no) 0.394 (n=180); applicability (B-out) 0.000 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 0.921 (n=240)
+  restrictive: false acceptance (D, R, C-no) 0.989 (n=180); applicability (B-out) 0.000 (n=60); genuine retention (B-in, R-ctl, C-ok, C-ctl) 0.992 (n=240)
+  paired accuracy C-no / C-ctl: 0.300 [0.225, 0.387] n=120
+  paired accuracy C-no / C-ok: 0.458 [0.372, 0.547] n=120
+  paired accuracy R / R-ctl: 0.467 [0.380, 0.556] n=120
+  paired accuracy B-out / B-in: 0.992 [0.954, 0.999] n=120
+wrote results/main/effects.json

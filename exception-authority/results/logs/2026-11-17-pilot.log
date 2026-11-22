@@ -1,0 +1,211 @@
+# Output of the pilot run (17 Nov 2026), approved caps: OpenRouter $0.20, Haiku $1, Sonnet $2, Opus $3; the repository prefix is replaced by '.'.
+stage pilot: Pre-registered go/no-go (PREREG.md section 5). Not pooled into the main analysis.
+feed protocol: prefill
+llama-3.3-70b: 0 done, 216 to run
+qwen3.8-flash: 0 done, 216 to run
+gemini-3.5-flash-lite: 0 done, 216 to run
+gpt-4.1-mini: 0 done, 216 to run
+model                 items  est. $/item  worst $/item  est. total  basis
+llama-3.3-70b           216      0.00027       0.00423       $0.06  mean of 108 logged rows
+qwen3.8-flash           216      0.00005       0.00217       $0.01  mean of 109 logged rows
+gemini-3.5-flash-lite    216      0.00014       0.01059       $0.03  mean of 109 logged rows
+gpt-4.1-mini            216      0.00015       0.00718       $0.03  mean of 108 logged rows
+estimated spend: $0.13   worst case if every reply hit max_tokens: $5.22   hard cap: $0.20
+llama-3.3-70b: running 216 requests (216 items) with 4 workers
+  llama-3.3-70b: 21/216 items, 0 errors, $0.0056, 0.1 min
+  llama-3.3-70b: 42/216 items, 0 errors, $0.0111, 0.2 min
+  llama-3.3-70b: 63/216 items, 0 errors, $0.0169, 0.3 min
+  llama-3.3-70b: 84/216 items, 0 errors, $0.0226, 0.5 min
+  llama-3.3-70b: 105/216 items, 0 errors, $0.0282, 0.7 min
+  llama-3.3-70b: 126/216 items, 0 errors, $0.0339, 0.8 min
+  llama-3.3-70b: 147/216 items, 0 errors, $0.0397, 0.9 min
+  llama-3.3-70b: 168/216 items, 0 errors, $0.0453, 1.0 min
+  llama-3.3-70b: 189/216 items, 0 errors, $0.0511, 1.1 min
+  llama-3.3-70b: 210/216 items, 0 errors, $0.0567, 1.3 min
+llama-3.3-70b: 216 ok, 0 errors, 0 not started; 79,221 tokens in, 3,024 out, about $0.0584
+qwen3.8-flash: running 216 requests (216 items) with 4 workers
+  qwen3.8-flash: 21/216 items, 0 errors, $0.0010, 0.1 min
+  qwen3.8-flash: 42/216 items, 0 errors, $0.0020, 0.2 min
+  qwen3.8-flash: 63/216 items, 0 errors, $0.0030, 0.3 min
+  qwen3.8-flash: 84/216 items, 0 errors, $0.0040, 0.4 min
+  qwen3.8-flash: 105/216 items, 0 errors, $0.0050, 0.5 min
+  qwen3.8-flash: 126/216 items, 0 errors, $0.0060, 0.6 min
+  qwen3.8-flash: 147/216 items, 0 errors, $0.0070, 0.7 min
+  qwen3.8-flash: 168/216 items, 0 errors, $0.0080, 0.7 min
+  qwen3.8-flash: 189/216 items, 0 errors, $0.0090, 0.8 min
+  qwen3.8-flash: 210/216 items, 0 errors, $0.0100, 0.9 min
+qwen3.8-flash: 216 ok, 0 errors, 0 not started; 59,968 tokens in, 2,835 out, about $0.0103
+gemini-3.5-flash-lite: running 216 requests (216 items) with 4 workers
+  gemini-3.5-flash-lite: 21/216 items, 0 errors, $0.0029, 0.1 min
+  gemini-3.5-flash-lite: 42/216 items, 0 errors, $0.0058, 0.1 min
+  gemini-3.5-flash-lite: 63/216 items, 0 errors, $0.0087, 0.2 min
+  gemini-3.5-flash-lite: 84/216 items, 0 errors, $0.0116, 0.2 min
+  gemini-3.5-flash-lite: 105/216 items, 0 errors, $0.0144, 0.3 min
+  gemini-3.5-flash-lite: 126/216 items, 0 errors, $0.0173, 0.4 min
+  gemini-3.5-flash-lite: 147/216 items, 0 errors, $0.0202, 0.4 min
+  gemini-3.5-flash-lite: 168/216 items, 0 errors, $0.0230, 0.5 min
+  gemini-3.5-flash-lite: 189/216 items, 0 errors, $0.0259, 0.5 min
+  gemini-3.5-flash-lite: 210/216 items, 0 errors, $0.0287, 0.6 min
+gemini-3.5-flash-lite: 216 ok, 0 errors, 0 not started; 65,836 tokens in, 3,930 out, about $0.0296
+gpt-4.1-mini: running 216 requests (216 items) with 4 workers
+  gpt-4.1-mini: 21/216 items, 0 errors, $0.0030, 0.1 min
+  gpt-4.1-mini: 42/216 items, 0 errors, $0.0061, 0.2 min
+  gpt-4.1-mini: 63/216 items, 0 errors, $0.0091, 0.2 min
+  gpt-4.1-mini: 84/216 items, 0 errors, $0.0122, 0.3 min
+  gpt-4.1-mini: 105/216 items, 0 errors, $0.0153, 0.4 min
+  gpt-4.1-mini: 126/216 items, 0 errors, $0.0183, 0.4 min
+  gpt-4.1-mini: 147/216 items, 0 errors, $0.0213, 0.5 min
+  gpt-4.1-mini: 168/216 items, 0 errors, $0.0244, 0.6 min
+  gpt-4.1-mini: 189/216 items, 0 errors, $0.0275, 0.7 min
+  gpt-4.1-mini: 210/216 items, 0 errors, $0.0305, 0.7 min
+gpt-4.1-mini: 216 ok, 0 errors, 0 not started; 67,701 tokens in, 2,696 out, about $0.0314
+spend this command: about $0.1297 of a $0.20 cap (ledger: ./results/spend-ledger.jsonl)
+next: python scripts/04_health_check.py pilot
+llama-3.3-70b: 216/216 done, 0 error lines logged, $0.0584
+  tokens in: median 376, max 394; out: median 14, max 14
+  served model(s): meta-llama/llama-3.3-70b-instruct (216)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 15/216
+qwen3.8-flash: 216/216 done, 0 error lines logged, $0.0103
+  tokens in: median 288, max 304; out: median 13, max 22
+  served model(s): qwen/qwen3.8-flash (216)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 1/216
+gemini-3.5-flash-lite: 216/216 done, 0 error lines logged, $0.0296
+  tokens in: median 316, max 329; out: median 20, max 20
+  served model(s): google/gemini-3.5-flash-lite (216)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/216
+gpt-4.1-mini: 216/216 done, 0 error lines logged, $0.0314
+  tokens in: median 323, max 340; out: median 12, max 14
+  served model(s): openai/gpt-4.1-mini (216)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 4/216
+CLEAN: stage pilot has no protocol problems.
+stage pilot: Pre-registered go/no-go (PREREG.md section 5). Not pooled into the main analysis.
+feed protocol: prefill
+claude-haiku-5-5: 0 done, 216 to run
+model                 items  est. $/item  worst $/item  est. total  basis
+claude-haiku-5-5        216      0.00020       0.00220       $0.04  mean of 111 logged rows
+estimated spend: $0.04   worst case if every reply hit max_tokens: $0.47   hard cap: $1.00
+claude-haiku-5-5: running 216 requests (216 items) with 4 workers
+  claude-haiku-5-5: 21/216 items, 0 errors, $0.0046, 0.2 min
+  claude-haiku-5-5: 42/216 items, 0 errors, $0.0093, 0.4 min
+  claude-haiku-5-5: 63/216 items, 0 errors, $0.0142, 0.5 min
+  claude-haiku-5-5: 84/216 items, 0 errors, $0.0184, 0.7 min
+  claude-haiku-5-5: 105/216 items, 0 errors, $0.0228, 0.9 min
+  claude-haiku-5-5: 126/216 items, 0 errors, $0.0279, 1.0 min
+  claude-haiku-5-5: 147/216 items, 0 errors, $0.0322, 1.2 min
+  claude-haiku-5-5: 168/216 items, 0 errors, $0.0367, 1.4 min
+  claude-haiku-5-5: 189/216 items, 0 errors, $0.0415, 1.6 min
+  claude-haiku-5-5: 210/216 items, 0 errors, $0.0460, 1.7 min
+claude-haiku-5-5: 216 ok, 0 errors, 0 not started; 215,654 tokens in, 51,734 out, about $0.0474
+spend this command: about $0.0474 of a $1.00 cap (ledger: ./results/spend-ledger.jsonl)
+next: python scripts/04_health_check.py pilot
+claude-haiku-5-5: 216/216 done, 0 error lines logged, $0.0474
+  tokens in: median 1012, max 1036; out: median 202, max 709
+  served model(s): claude-haiku-5-5 (216)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 22/216
+CLEAN: stage pilot has no protocol problems.
+stage pilot: Pre-registered go/no-go (PREREG.md section 5). Not pooled into the main analysis.
+feed protocol: prefill
+claude-sonnet-5-5: 0 done, 216 to run
+model                 items  est. $/item  worst $/item  est. total  basis
+claude-sonnet-5-5       216      0.00274       0.04391       $0.59  mean of 108 logged rows
+estimated spend: $0.59   worst case if every reply hit max_tokens: $9.48   hard cap: $2.00
+claude-sonnet-5-5: running 216 requests (216 items) with 4 workers
+  claude-sonnet-5-5: 21/216 items, 0 errors, $0.0562, 0.2 min
+  claude-sonnet-5-5: 42/216 items, 0 errors, $0.1189, 0.3 min
+  claude-sonnet-5-5: 63/216 items, 0 errors, $0.1760, 0.5 min
+  claude-sonnet-5-5: 84/216 items, 0 errors, $0.2376, 0.7 min
+  claude-sonnet-5-5: 105/216 items, 0 errors, $0.2897, 0.9 min
+  claude-sonnet-5-5: 126/216 items, 0 errors, $0.3474, 1.1 min
+  claude-sonnet-5-5: 147/216 items, 0 errors, $0.4032, 1.4 min
+  claude-sonnet-5-5: 168/216 items, 0 errors, $0.4593, 1.6 min
+  claude-sonnet-5-5: 189/216 items, 0 errors, $0.5204, 1.8 min
+  claude-sonnet-5-5: 210/216 items, 0 errors, $0.5814, 1.9 min
+claude-sonnet-5-5: 216 ok, 0 errors, 0 not started; 215,654 tokens in, 16,659 out, about $0.5979
+spend this command: about $0.5979 of a $2.00 cap (ledger: ./results/spend-ledger.jsonl)
+next: python scripts/04_health_check.py pilot
+claude-sonnet-5-5: 216/216 done, 0 error lines logged, $0.5979
+  tokens in: median 1012, max 1036; out: median 71, max 309
+  served model(s): claude-sonnet-5-5 (216)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 1/216
+CLEAN: stage pilot has no protocol problems.
+stage pilot: Pre-registered go/no-go (PREREG.md section 5). Not pooled into the main analysis.
+feed protocol: prefill
+claude-opus-5-5: 0 done, 216 to run
+model                 items  est. $/item  worst $/item  est. total  basis
+claude-opus-5-5         216      0.00595       0.08782       $1.28  mean of 108 logged rows
+estimated spend: $1.28   worst case if every reply hit max_tokens: $18.97   hard cap: $3.00
+claude-opus-5-5: running 216 requests (216 items) with 4 workers
+  claude-opus-5-5: 21/216 items, 0 errors, $0.1182, 0.2 min
+  claude-opus-5-5: 42/216 items, 0 errors, $0.2334, 0.3 min
+  claude-opus-5-5: 63/216 items, 0 errors, $0.3531, 0.5 min
+  claude-opus-5-5: 84/216 items, 0 errors, $0.4736, 0.7 min
+  claude-opus-5-5: 105/216 items, 0 errors, $0.5965, 0.9 min
+  claude-opus-5-5: 126/216 items, 0 errors, $0.7164, 1.1 min
+  claude-opus-5-5: 147/216 items, 0 errors, $0.8382, 1.2 min
+  claude-opus-5-5: 168/216 items, 0 errors, $0.9626, 1.5 min
+  claude-opus-5-5: 189/216 items, 0 errors, $1.0833, 1.6 min
+  claude-opus-5-5: 210/216 items, 0 errors, $1.2039, 1.8 min
+claude-opus-5-5: 216 ok, 0 errors, 0 not started; 215,654 tokens in, 18,807 out, about $1.2388
+spend this command: about $1.2388 of a $3.00 cap (ledger: ./results/spend-ledger.jsonl)
+next: python scripts/04_health_check.py pilot
+llama-3.3-70b: 216/216 done, 0 error lines logged, $0.0584
+  tokens in: median 376, max 394; out: median 14, max 14
+  served model(s): meta-llama/llama-3.3-70b-instruct (216)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 15/216
+qwen3.8-flash: 216/216 done, 0 error lines logged, $0.0103
+  tokens in: median 288, max 304; out: median 13, max 22
+  served model(s): qwen/qwen3.8-flash (216)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 1/216
+claude-haiku-5-5: 216/216 done, 0 error lines logged, $0.0474
+  tokens in: median 1012, max 1036; out: median 202, max 709
+  served model(s): claude-haiku-5-5 (216)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 22/216
+gemini-3.5-flash-lite: 216/216 done, 0 error lines logged, $0.0296
+  tokens in: median 316, max 329; out: median 20, max 20
+  served model(s): google/gemini-3.5-flash-lite (216)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/216
+gpt-4.1-mini: 216/216 done, 0 error lines logged, $0.0314
+  tokens in: median 323, max 340; out: median 12, max 14
+  served model(s): openai/gpt-4.1-mini (216)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 4/216
+claude-sonnet-5-5: 216/216 done, 0 error lines logged, $0.5979
+  tokens in: median 1012, max 1036; out: median 71, max 309
+  served model(s): claude-sonnet-5-5 (216)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 1/216
+claude-opus-5-5: 216/216 done, 0 error lines logged, $1.2388
+  tokens in: median 1012, max 1036; out: median 74, max 226
+  served model(s): claude-opus-5-5 (216)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/216
+CLEAN: stage pilot has no protocol problems.
+pilot runs done
+
+# 05_score.py gonogo pilot, filtered to verdicts, P1 and the panel line (the range diagnostics M1 and M2 are in results/pilot/gonogo.json):
+claude-haiku-5-5: GO
+  pass  P1 lowest valid share in a cell (all cells but D): 1.000 (needs >= 0.95 in every cell)
+claude-opus-5-5: GO
+  pass  P1 lowest valid share in a cell (all cells but D): 1.000 (needs >= 0.95 in every cell)
+claude-sonnet-5-5: GO
+  pass  P1 lowest valid share in a cell (all cells but D): 1.000 (needs >= 0.95 in every cell)
+gemini-3.5-flash-lite: GO (range diagnostic failed)
+  pass  P1 lowest valid share in a cell (all cells but D): 1.000 (needs >= 0.95 in every cell)
+gpt-4.1-mini: GO (range diagnostic failed)
+  pass  P1 lowest valid share in a cell (all cells but D): 1.000 (needs >= 0.95 in every cell)
+llama-3.3-70b: GO (range diagnostic failed)
+  pass  P1 lowest valid share in a cell (all cells but D): 1.000 (needs >= 0.95 in every cell)
+qwen3.8-flash: GO (range diagnostic failed)
+  pass  P1 lowest valid share in a cell (all cells but D): 1.000 (needs >= 0.95 in every cell)
+panel: GO for every model that passes P1
+cell D was not read.

@@ -1,0 +1,144 @@
+# Output of results/logs/run_check_openrouter_yes.sh 3.00 1.00, 17 Nov 2026; the absolute repository prefix is replaced by '.'.
+stage check: One scenario per domain x direction on real models (54 items each; Sonnet is here only so the panel decision can use its health and token counts). Looks for request errors, rejected parameters, refusals, truncation, parse failures, served hosts and token counts, not effects. Not study data.
+feed protocol: prefill
+llama-3.3-70b: 0 done, 108 to run (2 samples per item)
+qwen3.8-flash: 0 done, 108 to run (2 samples per item)
+claude-haiku-5-5: 54 done, 0 to run
+gemini-3.5-flash-lite: 0 done, 108 to run (2 samples per item)
+gpt-4.1-mini: 0 done, 108 to run (2 samples per item)
+claude-sonnet-5-5: 54 done, 0 to run
+claude-opus-5-5: 54 done, 0 to run
+model                 items  est. $/item  worst $/item  est. total  basis
+llama-3.3-70b           108      0.00208       0.00422       $0.22  no logs yet: high default (2000 output tokens)
+qwen3.8-flash           108      0.00108       0.00217       $0.12  no logs yet: high default (2000 output tokens)
+claude-haiku-5-5          0      0.00020       0.00000       $0.00  mean of 111 logged rows
+gemini-3.5-flash-lite    108      0.00528       0.01058       $0.57  no logs yet: high default (2000 output tokens)
+gpt-4.1-mini            108      0.00357       0.00718       $0.39  no logs yet: high default (2000 output tokens)
+claude-sonnet-5-5         0      0.00274       0.00000       $0.00  mean of 108 logged rows
+claude-opus-5-5           0      0.00595       0.00000       $0.00  mean of 108 logged rows
+estimated spend: $1.30   worst case if every reply hit max_tokens: $2.61
+ANTHROPIC_API_KEY: found (value not shown)
+OPENROUTER_API_KEY: found (value not shown)
+dry run: nothing was sent.
+stage check: One scenario per domain x direction on real models (54 items each; Sonnet is here only so the panel decision can use its health and token counts). Looks for request errors, rejected parameters, refusals, truncation, parse failures, served hosts and token counts, not effects. Not study data.
+feed protocol: prefill
+llama-3.3-70b: 0 done, 108 to run (2 samples per item)
+qwen3.8-flash: 0 done, 108 to run (2 samples per item)
+claude-haiku-5-5: 54 done, 0 to run
+gemini-3.5-flash-lite: 0 done, 108 to run (2 samples per item)
+gpt-4.1-mini: 0 done, 108 to run (2 samples per item)
+model                 items  est. $/item  worst $/item  est. total  basis
+llama-3.3-70b           108      0.00208       0.00422       $0.22  no logs yet: high default (2000 output tokens)
+qwen3.8-flash           108      0.00108       0.00217       $0.12  no logs yet: high default (2000 output tokens)
+claude-haiku-5-5          0      0.00020       0.00000       $0.00  mean of 111 logged rows
+gemini-3.5-flash-lite    108      0.00528       0.01058       $0.57  no logs yet: high default (2000 output tokens)
+gpt-4.1-mini            108      0.00357       0.00718       $0.39  no logs yet: high default (2000 output tokens)
+estimated spend: $1.30   worst case if every reply hit max_tokens: $2.61   hard cap: $3.00
+llama-3.3-70b: running 108 requests (54 items) with 4 workers
+  llama-3.3-70b: 10/54 items, 0 errors, $0.0056, 0.1 min
+  llama-3.3-70b: 20/54 items, 0 errors, $0.0110, 0.2 min
+  llama-3.3-70b: 30/54 items, 0 errors, $0.0168, 0.3 min
+  llama-3.3-70b: 40/54 items, 0 errors, $0.0219, 0.4 min
+  llama-3.3-70b: 50/54 items, 0 errors, $0.0276, 0.5 min
+llama-3.3-70b: 108 ok, 0 errors, 0 not started; 39,674 tokens in, 1,512 out, about $0.0292
+qwen3.8-flash: running 108 requests (54 items) with 4 workers
+  qwen3.8-flash: 10/54 items, 0 errors, $0.0011, 0.1 min
+  qwen3.8-flash: 20/54 items, 0 errors, $0.0021, 0.2 min
+  qwen3.8-flash: 30/54 items, 0 errors, $0.0029, 0.3 min
+  qwen3.8-flash: 40/54 items, 0 errors, $0.0040, 0.4 min
+  qwen3.8-flash: 50/54 items, 0 errors, $0.0049, 0.4 min
+qwen3.8-flash: 108 ok, 0 errors, 0 not started; 30,056 tokens in, 1,416 out, about $0.0052
+gemini-3.5-flash-lite: running 108 requests (54 items) with 4 workers
+  gemini-3.5-flash-lite: 10/54 items, 0 errors, $0.0030, 0.1 min
+  gemini-3.5-flash-lite: 20/54 items, 0 errors, $0.0057, 0.1 min
+  gemini-3.5-flash-lite: 30/54 items, 0 errors, $0.0085, 0.2 min
+  gemini-3.5-flash-lite: 40/54 items, 0 errors, $0.0110, 0.2 min
+  gemini-3.5-flash-lite: 50/54 items, 0 errors, $0.0139, 0.3 min
+gemini-3.5-flash-lite: 108 ok, 0 errors, 0 not started; 32,940 tokens in, 1,992 out, about $0.0149
+gpt-4.1-mini: running 108 requests (54 items) with 4 workers
+  gpt-4.1-mini: 10/54 items, 0 errors, $0.0032, 0.1 min
+  gpt-4.1-mini: 20/54 items, 0 errors, $0.0060, 0.1 min
+  gpt-4.1-mini: 30/54 items, 0 errors, $0.0089, 0.2 min
+  gpt-4.1-mini: 40/54 items, 0 errors, $0.0119, 0.3 min
+  gpt-4.1-mini: 50/54 items, 0 errors, $0.0149, 0.3 min
+gpt-4.1-mini: 108 ok, 0 errors, 0 not started; 33,882 tokens in, 1,344 out, about $0.0157
+spend this command: about $0.0650 of a $3.00 cap (ledger: ./results/spend-ledger.jsonl)
+next: python scripts/04_health_check.py check
+llama-3.3-70b: 108/108 done, 0 error lines logged, $0.0292
+  tokens in: median 378, max 394; out: median 14, max 14
+  served model(s): meta-llama/llama-3.3-70b-instruct (108)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 7/108
+  decision differs between samples: 1/54 items (2 samples per item)
+qwen3.8-flash: 108/108 done, 0 error lines logged, $0.0052
+  tokens in: median 288, max 304; out: median 13, max 19
+  served model(s): qwen/qwen3.8-flash (108)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/108
+  decision differs between samples: 0/54 items (2 samples per item)
+claude-haiku-5-5: 54/54 done, 0 error lines logged, $0.0118
+  tokens in: median 1014, max 1038; out: median 218, max 514
+  served model(s): claude-haiku-5-5 (54)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 7/54
+gemini-3.5-flash-lite: 108/108 done, 0 error lines logged, $0.0149
+  tokens in: median 316, max 329; out: median 20, max 20
+  served model(s): google/gemini-3.5-flash-lite (108)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/108
+  decision differs between samples: 0/54 items (2 samples per item)
+gpt-4.1-mini: 108/108 done, 0 error lines logged, $0.0157
+  tokens in: median 324, max 340; out: median 12, max 14
+  served model(s): openai/gpt-4.1-mini (108)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 2/108
+  decision differs between samples: 0/54 items (2 samples per item)
+CLEAN: stage check has no protocol problems.
+stage check: One scenario per domain x direction on real models (54 items each; Sonnet is here only so the panel decision can use its health and token counts). Looks for request errors, rejected parameters, refusals, truncation, parse failures, served hosts and token counts, not effects. Not study data.
+feed protocol: prefill
+claude-opus-5-5: 54 done, 0 to run
+model                 items  est. $/item  worst $/item  est. total  basis
+claude-opus-5-5           0      0.00595       0.00000       $0.00  mean of 108 logged rows
+estimated spend: $0.00   worst case if every reply hit max_tokens: $0.00   hard cap: $1.00
+next: python scripts/04_health_check.py check
+llama-3.3-70b: 108/108 done, 0 error lines logged, $0.0292
+  tokens in: median 378, max 394; out: median 14, max 14
+  served model(s): meta-llama/llama-3.3-70b-instruct (108)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 7/108
+  decision differs between samples: 1/54 items (2 samples per item)
+qwen3.8-flash: 108/108 done, 0 error lines logged, $0.0052
+  tokens in: median 288, max 304; out: median 13, max 19
+  served model(s): qwen/qwen3.8-flash (108)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/108
+  decision differs between samples: 0/54 items (2 samples per item)
+claude-haiku-5-5: 54/54 done, 0 error lines logged, $0.0118
+  tokens in: median 1014, max 1038; out: median 218, max 514
+  served model(s): claude-haiku-5-5 (54)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 7/54
+gemini-3.5-flash-lite: 108/108 done, 0 error lines logged, $0.0149
+  tokens in: median 316, max 329; out: median 20, max 20
+  served model(s): google/gemini-3.5-flash-lite (108)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/108
+  decision differs between samples: 0/54 items (2 samples per item)
+gpt-4.1-mini: 108/108 done, 0 error lines logged, $0.0157
+  tokens in: median 324, max 340; out: median 12, max 14
+  served model(s): openai/gpt-4.1-mini (108)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 2/108
+  decision differs between samples: 0/54 items (2 samples per item)
+claude-sonnet-5-5: 54/54 done, 0 error lines logged, $0.1484
+  tokens in: median 1014, max 1038; out: median 68, max 248
+  served model(s): claude-sonnet-5-5 (54)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/54
+claude-opus-5-5: 54/54 done, 0 error lines logged, $0.3048
+  tokens in: median 1014, max 1038; out: median 73, max 220
+  served model(s): claude-opus-5-5 (54)
+  missing 0, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/54
+CLEAN: stage check has no protocol problems.
+check stage done: read about 10 replies in results/check/*.jsonl, pin the Gemini and Qwen hosts, then freeze

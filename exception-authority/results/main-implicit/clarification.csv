@@ -1,0 +1,28 @@
+stage,analysis,model,panel,cell,valid,flagged,accepted,accepted_and_flagged
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-haiku-5-5,panel,A,120,22,106,8
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-haiku-5-5,panel,D,120,30,106,16
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-haiku-5-5,panel,B-in,120,6,120,6
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-haiku-5-5,panel,B-out,120,9,1,1
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-haiku-5-5,panel,R,120,1,0,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-haiku-5-5,panel,R-ctl,120,6,120,6
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-haiku-5-5,panel,C-ok,120,4,120,4
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-haiku-5-5,panel,C-no,120,3,0,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-haiku-5-5,panel,C-ctl,120,3,120,3
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-sonnet-5-5,outside panel,A,120,3,97,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-sonnet-5-5,outside panel,D,120,0,81,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-sonnet-5-5,outside panel,B-in,120,0,120,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-sonnet-5-5,outside panel,B-out,120,0,0,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-sonnet-5-5,outside panel,R,120,0,0,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-sonnet-5-5,outside panel,R-ctl,120,0,120,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-sonnet-5-5,outside panel,C-ok,120,0,120,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-sonnet-5-5,outside panel,C-no,120,0,0,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-sonnet-5-5,outside panel,C-ctl,120,0,120,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-opus-5-5,panel,A,120,23,43,2
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-opus-5-5,panel,D,120,26,26,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-opus-5-5,panel,B-in,120,0,120,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-opus-5-5,panel,B-out,120,0,0,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-opus-5-5,panel,R,120,0,0,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-opus-5-5,panel,R-ctl,120,0,120,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-opus-5-5,panel,C-ok,120,0,120,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-opus-5-5,panel,C-no,120,0,0,0
+main-implicit,exploratory implicit-rule arm (PREREG section 4b),claude-opus-5-5,panel,C-ctl,120,0,120,0

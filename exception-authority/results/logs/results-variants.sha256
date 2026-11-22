@@ -1,0 +1,100 @@
+b508b7b75c0da180dfea5ab401a2647e69adcbeafe43b1e6f2ea0e24a0f960f6  manuscript/sections/results-variants.tex
+# written 2026-11-17T22:33:42Z (UTC), before any main-stage data was seen: nothing under results/main* or results/pilot/gonogo.json, and no scorer output, was opened. main and main-implicit were still running.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+# written 2026-11-17T22:57:40Z (UTC), post-freeze and pre-data: no main-stage result, gonogo.json or scorer output opened; main and main-implicit still running.
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  manuscript/sections/results-variants.tex
+# re-hashed 2026-11-17T22:57:40Z (UTC) after the implicit-arm sentences were changed to name the six unadjusted comparisons (clarification 4); still pre-data. Supersedes the first hash above.
+# 2026-11-18T01:23:26Z (UTC), after main and main-implicit were scored: V3 selected by the rule (nF = 0, ceiling false); H-some (5 of 6) and Imp-rise chosen; the V3, H-some and Imp-rise slots filled with model and cell names. clarifications unchanged; variants file changed only in those slots (five slots on four lines). The pre-data version is kept as results-variants.predata.tex (its hash equals the 22:57:40Z line above).
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+4e5a87d59b6943e990c622767c7b3a3f367ccaa17692395cd4f3f069f7e776d0  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+# 2026-11-18T02:34:02Z (UTC), after the authors' review: three corrections to the V3 text (listed with the diff in deviations.md) and k made a macro (\nHOneHolds). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+880a6e18cc30e73fabbbcde7c407283e61d9689ff735684b7f8c9fc305916d09  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+c6caed9f80aafb9d0a1752b3c0b1d549db61d5ef8b4a2a826d8051843b68d363  exception-authority/results/logs/deviations.md
+# 2026-11-18T02:50:06Z (UTC), after the authors' review of the results: post-data rewrites of summary text (abstract, contribution, discussion; listed with the diff in deviations.md). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+41ca220e1fe5f6633ad435e1e1a10cf504306a5b0798383a66266762be85688a  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+599f3f91c7e8fdf8484050bba20badc3240fe9cdb51f4169f5865c01aee2a9cc  exception-authority/results/logs/deviations.md
+# 2026-11-18T03:00:41Z (UTC): "where the record decides" added to the Taken-together paragraph (rewrite 5 in deviations.md). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+538b6dc634baaf7acdda2a4244cf60b4bcf44667bec2e0e123b17c9113aba002  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+93e4ce86a7802881015f0e9b043c8ade2a0f65dbdfeab36e1e9a16dc3f53883c  exception-authority/results/logs/deviations.md
+# 2026-11-18T03:44:16Z (UTC): figure and table upgrade; rewrites 6-12 outside the variant file logged in deviations.md. variants file, clarifications and pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+538b6dc634baaf7acdda2a4244cf60b4bcf44667bec2e0e123b17c9113aba002  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+f8bc50c63d42f9cf3a85a46c3a5c4a2740d1e68cf0253f9859d09c650cf71213  exception-authority/results/logs/deviations.md
+# 2026-11-18T03:58:09Z (UTC): presentation changes 13-14 (Table 2 shading, Figure 1 styling) logged in deviations.md; no result text changed. variants file, clarifications and pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+538b6dc634baaf7acdda2a4244cf60b4bcf44667bec2e0e123b17c9113aba002  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+97e574a599eedc8f266fffd247aa0dd70b3ecb3443a8d05d791eaba47fd63159  exception-authority/results/logs/deviations.md
+# 2026-11-18T04:52:14Z (UTC): post-hoc template analysis and rewrites after the pre-submission review (items 15-21 in deviations.md). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+bedc816ff2bb75d3c73084b0049e7f6b01843cbf35598a066d06c794accbe80b  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+b5f243a1b8135938b2808021fb3d0362a68accf263422003ddb7ac15c0a5a2b1  exception-authority/results/logs/deviations.md
+# 2026-11-18T05:08:44Z (UTC): abstract implicit-arm sentence rewritten with per-model template counts (item 22 in deviations.md). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+e40793fe9a5a365ac7845923354a533c73e8f6407fcbb75fbe24f816a3943c7c  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+852d308502872523c40bceb3d0f6b3e1ba2f689aed772db12047807ef273db50  exception-authority/results/logs/deviations.md
+# 2026-11-18T05:28:09Z (UTC): readability edits (item 23 in deviations.md). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+f0b941d351ca211c9f69266822af7f9a947c2afd0c47b40606c9b0f66403312b  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+6632a1305db6b51dba575fee30ba7756b969ce12a142898c3484870fb9cc2e9b  exception-authority/results/logs/deviations.md
+# 2026-11-19T23:16:32Z (UTC): second readability pass and closing statement (item 25 in deviations.md). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+bcb4c757eaedd52946d78acdeb13ffece33166601f2520f8792ab0f88eef6a13  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+6910f39a6f821b5c606a43052c7c9f0eb8302edfb0a45082ba95cb4191b01b12  exception-authority/results/logs/deviations.md
+# 2026-11-20T00:14:20Z (UTC): reviewer-response revision, trial and final wording (item 26 in deviations.md). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+8968a471d80f9bf21e3dd2780e386a839c6426c3d11e7f29433d923311510e91  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+752d308a7e86810e4120e903a16e5248cc1568ae46d528fe28852c9e649eb363  exception-authority/results/logs/deviations.md
+# 2026-11-20T00:47:16Z (UTC): editorial pass, observed decisions instead of 'checked authority' (item 27 in deviations.md). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+f8d309280c7d23a00e0fccab59be804fac9a0acd31b6d936be413d823682930e  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+25439d2746e0a5bb7785b0962aa91154088ba3e591b7998c7345af52b954d5f6  exception-authority/results/logs/deviations.md
+# 2026-11-20T01:02:16Z (UTC): log redaction (item 28 in deviations.md); paper, code and results unchanged. clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+f8d309280c7d23a00e0fccab59be804fac9a0acd31b6d936be413d823682930e  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+6d6f2a409d90eed14e046f3f85d68eec9930053fc1d08c829d47a465264d0971  exception-authority/results/logs/deviations.md
+# 2026-11-20T01:07:51Z (UTC): log wording (item 28 in deviations.md); paper, code and results unchanged. clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+f8d309280c7d23a00e0fccab59be804fac9a0acd31b6d936be413d823682930e  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+d0b6bdea4f1a32e0b6bbe58e7cf01e25480ac74135bca45651899952a7aa29bb  exception-authority/results/logs/deviations.md
+# 2026-11-20T01:31:15Z (UTC): related work and decision wording (item 29 in deviations.md). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+4b0c7884eea861d8c3113ed81cfa2563b84501e3ae09998c6eda1f6534b5446c  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+dd8efac6149911b90577d8bfb7493b9d33e0826aaea8db4c0c1b9f23481b4f72  exception-authority/results/logs/deviations.md
+# 2026-11-20T04:08:18Z (UTC): shorter abstract (item 30 in deviations.md). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+0c9c9317375555c10ada1e0eb2abc705aaca04776b7f8c6aee9b4ba6a0f89034  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+3d99871991ce496fb5de0077b2f4df9246477240667f731e3334b037b86e2268  exception-authority/results/logs/deviations.md
+# 2026-11-20T04:13:17Z (UTC): abstract wording (item 31 in deviations.md). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+d4e369a646ad57eaca8fc8827438d67541fad1f2dbcb286feb42ac7e9b2d5b9a  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+90a0a63a591e0e5506cbd476cb97a06ed610b4a0e55a31acc07e5d318cfff728  exception-authority/results/logs/deviations.md
+# 2026-11-20T04:16:39Z (UTC): final abstract wording (item 32 in deviations.md). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+ea68d06cae267b58bf0ae9a30e276826ee7e773d9ee2b0e52051825496756b1b  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+e0d457bc0b4e4938b9a50f3edca65d5559a86d24df220db7adb4fafd486cca64  exception-authority/results/logs/deviations.md
+# 2026-11-20T04:54:15Z (UTC): answers to predicted objections (item 33 in deviations.md). clarifications unchanged; pre-data copy unchanged.
+ec93a9f2a8cf9e1e196ef7dabb633d46877c3e02494c4eacf6804c556fdd54ad  exception-authority/results/logs/prereg-clarifications.md
+ea68d06cae267b58bf0ae9a30e276826ee7e773d9ee2b0e52051825496756b1b  manuscript/sections/results-variants.tex
+8a77d23b5815a53c192140cd5197d8b35e705ba4808861d108c778cec82d7513  exception-authority/results/logs/results-variants.predata.tex
+492ce252f6b9cdaa5bc0a9b40bbf3a4795b224240f57f753ea1db7ad6b833e07  exception-authority/results/logs/deviations.md

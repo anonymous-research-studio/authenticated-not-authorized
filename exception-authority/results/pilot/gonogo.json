@@ -1,0 +1,153 @@
+{
+  "models": {
+    "claude-haiku-5-5": {
+      "checks": {
+        "M1 acceptance B-in minus A": [
+          0.8333333333333334,
+          true,
+          ">= 0.3"
+        ],
+        "M2 accuracy B-out": [
+          1.0,
+          true,
+          ">= 0.7"
+        ],
+        "P1 lowest valid share in a cell (all cells but D)": [
+          1.0,
+          true,
+          ">= 0.95 in every cell"
+        ]
+      },
+      "go": true,
+      "range_ok": true
+    },
+    "claude-opus-5-5": {
+      "checks": {
+        "M1 acceptance B-in minus A": [
+          1.0,
+          true,
+          ">= 0.3"
+        ],
+        "M2 accuracy B-out": [
+          1.0,
+          true,
+          ">= 0.7"
+        ],
+        "P1 lowest valid share in a cell (all cells but D)": [
+          1.0,
+          true,
+          ">= 0.95 in every cell"
+        ]
+      },
+      "go": true,
+      "range_ok": true
+    },
+    "claude-sonnet-5-5": {
+      "checks": {
+        "M1 acceptance B-in minus A": [
+          0.75,
+          true,
+          ">= 0.3"
+        ],
+        "M2 accuracy B-out": [
+          1.0,
+          true,
+          ">= 0.7"
+        ],
+        "P1 lowest valid share in a cell (all cells but D)": [
+          1.0,
+          true,
+          ">= 0.95 in every cell"
+        ]
+      },
+      "go": true,
+      "range_ok": true
+    },
+    "gemini-3.5-flash-lite": {
+      "checks": {
+        "M1 acceptance B-in minus A": [
+          0.0,
+          false,
+          ">= 0.3"
+        ],
+        "M2 accuracy B-out": [
+          1.0,
+          true,
+          ">= 0.7"
+        ],
+        "P1 lowest valid share in a cell (all cells but D)": [
+          1.0,
+          true,
+          ">= 0.95 in every cell"
+        ]
+      },
+      "go": true,
+      "range_ok": false
+    },
+    "gpt-4.1-mini": {
+      "checks": {
+        "M1 acceptance B-in minus A": [
+          0.0,
+          false,
+          ">= 0.3"
+        ],
+        "M2 accuracy B-out": [
+          1.0,
+          true,
+          ">= 0.7"
+        ],
+        "P1 lowest valid share in a cell (all cells but D)": [
+          1.0,
+          true,
+          ">= 0.95 in every cell"
+        ]
+      },
+      "go": true,
+      "range_ok": false
+    },
+    "llama-3.3-70b": {
+      "checks": {
+        "M1 acceptance B-in minus A": [
+          0.0,
+          false,
+          ">= 0.3"
+        ],
+        "M2 accuracy B-out": [
+          0.75,
+          true,
+          ">= 0.7"
+        ],
+        "P1 lowest valid share in a cell (all cells but D)": [
+          1.0,
+          true,
+          ">= 0.95 in every cell"
+        ]
+      },
+      "go": true,
+      "range_ok": false
+    },
+    "qwen3.8-flash": {
+      "checks": {
+        "M1 acceptance B-in minus A": [
+          0.0,
+          false,
+          ">= 0.3"
+        ],
+        "M2 accuracy B-out": [
+          1.0,
+          true,
+          ">= 0.7"
+        ],
+        "P1 lowest valid share in a cell (all cells but D)": [
+          1.0,
+          true,
+          ">= 0.95 in every cell"
+        ]
+      },
+      "go": true,
+      "range_ok": false
+    }
+  },
+  "panel": "GO for every model that passes P1",
+  "stage": "pilot"
+}

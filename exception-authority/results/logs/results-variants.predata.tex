@@ -1,0 +1,115 @@
+% results-variants.tex: result wording for the three registered outcomes, written on 17 Nov 2026
+% before any main-stage data was seen (hash in exception-authority/results/logs/results-variants.sha256).
+% Not \input anywhere yet. Every number is a macro from numbers.tex or a \fillin slot.
+% The selection rule below follows exception-authority/results/logs/prereg-clarifications.md (17 Nov,
+% post-freeze, pre-data). Implicit sentences: "six comparisons" = 3 models x {D, C-no}, unadjusted.
+%
+% ===================================================================================================
+% SELECTION RULE (mechanical; read only these fields, after `05_score.py effects main` and
+% `05_score.py effects main-implicit`)
+% ---------------------------------------------------------------------------------------------------
+% Panel  = the main stage's models minus outside_panel (config.json): the six models of nModels.
+% Claude panel models = claude-haiku-5-5, claude-opus-5-5. Sonnet is outside the panel and never
+% enters F, C or H1.
+%
+% Step 1, variant (results/main/effects.json, key "outcomes"):
+%   F_m = outcomes.floor_break[m] for m in the Claude panel models only (clarification 1; the F flags
+%         of non-Claude panel models are descriptive and not used here; Sonnet has no F flag).
+%   nF  = number of true F_m (= \nFloorBreakClaude).    C = outcomes.ceiling (= \ceilingHolds).
+%   nF >= 1               -> V1 (F held). Fill its "which" slots with the m whose F_m is true.
+%   nF == 0 and C true    -> V2 (C held).
+%   nF == 0 and C false   -> V3 (neither).
+%   F and C cannot both hold: F needs at least \floorBreakK{} acceptances out of \nBaseMain{} in an
+%   unauthorized cell, so that cell's accuracy is at most 90%, below the 95% that C requires.
+%
+% Step 2, H1 sub-alternative (same file, key "models"):
+%   H1_m holds iff models[m].contrasts["C-ctl - C-no"].holm_p < 0.05
+%              and models[m].contrasts["C-ctl - C-no"].estimate[0] > 0,   for each panel model m.
+%   k = number of panel models for which H1_m holds.
+%   k == nModels -> H-all;   0 < k < nModels -> H-some (slots: k and those models);   k == 0 -> H-none.
+%   Under V2 only H-all is reachable in practice: C puts C-ctl acceptance >= 95% and C-no
+%   acceptance <= 5%, a paired gap of at least 90 points. If V2 comes with H-some or H-none, stop
+%   and check the scorer before writing.
+%
+% Step 3, implicit-arm sub-alternative (results/main-implicit/effects.json, key "models"),
+% exploratory and unadjusted:
+%   rise_m iff, for cell D or cell C-no,
+%     models[m].explicit_minus_implicit[cell].estimate[2] < 0
+%   (the 95% bootstrap upper bound of explicit minus implicit acceptance is below zero, so acceptance
+%   is higher without the closed-world sentence), for m in Haiku, Sonnet, Opus.
+%   Six comparisons (3 models x 2 cells), unadjusted (clarification 4).
+%   Any rise_m true -> Imp-rise (slot: the models with rise_m true);   none true -> Imp-flat.
+%
+% Assembly for the chosen variant X in {One, Two, Three}:
+%   abstract: replace the \fillin sentence and the final sentence with \VXAbstract.
+%   introduction, contribution (2): replace the \fillin with \VXContribution.
+%   results: replace the "Pre-registered outcomes" paragraph with \VXOutcomes.
+%   discussion: replace the "What the results show" paragraph with
+%               \VXShows{} \VXH<All|Some|None>{} \VXImp<Rise|Flat>{} \VXScope
+% ===================================================================================================
+
+% ---------------------------------------------------------------------------------------------------
+% V1: prediction F held (nF >= 1)
+% ---------------------------------------------------------------------------------------------------
+\newcommand{\VOneAbstract}{Prediction F held for \nFloorBreakClaude{} of the \nClaude{} Claude models in the panel (\fillin{which}): even with the closed-world rule stated, an exception from an authentic issuer without the power was accepted often enough to clear the pre-registered floor. Claude Opus 5.5 showed \faOpus\% false acceptance against \retOpus\% genuine retention (primary contrast \priEstOpus{} points, Holm-adjusted $p$ \priHolmOpus{}); these results hold for one-hop delegation records, hand-derived labels and a stated rule, in a minimal-pair pilot for a planned benchmark with solver-computed labels.}
+
+\newcommand{\VOneContribution}{the pre-registered result: false acceptance above the floor for \nFloorBreakClaude{} of the \nClaude{} Claude panel models (\fillin{which}), with Opus at \faOpus\% false acceptance against \retOpus\% retention and \pairCnoCctlOpus\% paired accuracy on C-no/C-ctl;}
+
+\newcommand{\VOneOutcomes}{\paragraph{Pre-registered outcomes.}
+Prediction F held for \nFloorBreakClaude{} of the \nClaude{} Claude models in the panel (Haiku: \floorBreakHaiku{}; Opus: \floorBreakOpus{}). For each of them, at least one cell in which the issuer lacks the power (D, R or C-no) had acceptance whose Wilson lower bound, Bonferroni-adjusted over those cells (\floorBreakConf\%), exceeded \floorBreakLo\%: false acceptance was above zero even for Claude models. F is a descriptive threshold per model, not a test across models. Outcome C did not hold (\ceilingHolds{}); the lowest accuracy in any cell was \minAccHaiku\% for Haiku and \minAccOpus\% for Opus. Sonnet, outside the panel, is scored for neither outcome.}
+
+\newcommand{\VOneShows}{\paragraph{What the results show.}
+For \fillin{which Claude panel models}, an authentic entry from an issuer without the power was applied often enough to break the pre-registered floor, in \fillin{cell or cells whose bound cleared it}. Spoofing studies report near-zero rates on forged authority; our entries are authentic, so the two findings concern different capabilities and do not conflict.}
+
+\newcommand{\VOneHAll}{The primary contrast held for all \nModels{} panel models after Holm adjustment: each accepted more in C-ctl than in C-no, so the re-delegation right moved decisions even where the floor broke.}
+\newcommand{\VOneHSome}{The primary contrast held after Holm adjustment for \fillin{k} of the \nModels{} panel models (\fillin{which}); for the others, a re-delegation effect was not detectable at \nBaseMain{} base scenarios.}
+\newcommand{\VOneHNone}{The primary contrast held for none of the \nModels{} panel models after Holm adjustment, so the re-delegation right is not shown to move decisions at \nBaseMain{} base scenarios.}
+
+\newcommand{\VOneImpRise}{In the exploratory implicit-rule arm, acceptance rose without the closed-world sentence in at least one of six unadjusted comparisons (three models, D and C-no), for \fillin{which models} (Opus, explicit minus implicit: \impDiffDOpus{} points in D, \impDiffCnoOpus{} in C-no).}
+\newcommand{\VOneImpFlat}{In the exploratory implicit-rule arm, acceptance did not rise detectably without the closed-world sentence in any of six unadjusted comparisons (three models, D and C-no) (Opus, explicit minus implicit: \impDiffDOpus{} points in D, \impDiffCnoOpus{} in C-no).}
+
+\newcommand{\VOneScope}{These findings cover one-hop records, hand-derived labels and a rule the prompt states.}
+
+% ---------------------------------------------------------------------------------------------------
+% V2: outcome C held (nF == 0, C true)
+% ---------------------------------------------------------------------------------------------------
+\newcommand{\VTwoAbstract}{Outcome C held: every panel model reached at least \ceilingAcc\% accuracy in every cell, so current models apply an explicitly stated derivation rule reliably, and prediction F held for none of the \nClaude{} Claude panel models (Opus: \faOpus\% false acceptance against \retOpus\% genuine retention; primary contrast \priEstOpus{} points, Holm-adjusted $p$ \priHolmOpus{}). This holds for one-hop delegation records, hand-derived labels and a stated rule; whether models follow the record when the rule is unstated remains open for the planned benchmark with solver-computed labels.}
+
+\newcommand{\VTwoContribution}{the pre-registered result: outcome C held, with accuracy of at least \ceilingAcc\% in every cell for every panel model (Opus \faOpus\% false acceptance against \retOpus\% retention, \pairCnoCctlOpus\% paired accuracy on C-no/C-ctl), so the stated rule is applied reliably;}
+
+\newcommand{\VTwoOutcomes}{\paragraph{Pre-registered outcomes.}
+Outcome C held (\ceilingHolds{}): every panel model reached at least \ceilingAcc\% accuracy in every cell, with the lowest cell at \minAccHaiku\% for Haiku and \minAccOpus\% for Opus. As registered, we report that current models apply an explicit derivation rule reliably. Prediction F held for \nFloorBreakClaude{} of the \nClaude{} Claude models in the panel (Haiku: \floorBreakHaiku{}; Opus: \floorBreakOpus{}). Sonnet, outside the panel, is scored for neither outcome; its false acceptance was \faSonnet\% and its retention \retSonnet\%.}
+
+\newcommand{\VTwoShows}{\paragraph{What the results show.}
+With the closed-world rule stated, the panel separated an authentic issuer's statement from that issuer's power: accuracy was at least \ceilingAcc\% in every cell, including C-no, where only the delegator's right to delegate is withheld. The open question is the setting the confirmatory cells exclude, in which the rule is not stated.}
+
+\newcommand{\VTwoHAll}{The primary contrast held for all \nModels{} panel models after Holm adjustment.}
+\newcommand{\VTwoHSome}{The primary contrast held after Holm adjustment for \fillin{k} of the \nModels{} panel models (\fillin{which}).}
+\newcommand{\VTwoHNone}{The primary contrast held for none of the \nModels{} panel models after Holm adjustment.}
+
+\newcommand{\VTwoImpRise}{In the exploratory implicit-rule arm, acceptance rose once the closed-world sentence was deleted in at least one of six unadjusted comparisons (three models, D and C-no), for \fillin{which models} (Opus, explicit minus implicit: \impDiffDOpus{} points in D, \impDiffCnoOpus{} in C-no), so part of the ceiling may rest on the stated rule.}
+\newcommand{\VTwoImpFlat}{In the exploratory implicit-rule arm, acceptance did not rise detectably once the closed-world sentence was deleted in any of six unadjusted comparisons (three models, D and C-no) (Opus, explicit minus implicit: \impDiffDOpus{} points in D, \impDiffCnoOpus{} in C-no).}
+
+\newcommand{\VTwoScope}{These findings cover one-hop records, hand-derived labels and a rule the prompt states.}
+
+% ---------------------------------------------------------------------------------------------------
+% V3: neither held (nF == 0, C false)
+% ---------------------------------------------------------------------------------------------------
+\newcommand{\VThreeAbstract}{Neither pre-registered outcome held: prediction F held for none of the \nClaude{} Claude panel models, and outcome C failed because at least one panel model fell below \ceilingAcc\% accuracy in some cell, so the per-cell results are the finding (Opus: \faOpus\% false acceptance against \retOpus\% genuine retention; primary contrast \priEstOpus{} points, Holm-adjusted $p$ \priHolmOpus{}). These results hold for one-hop delegation records, hand-derived labels and a stated rule, in a minimal-pair pilot for a planned benchmark with solver-computed labels.}
+
+\newcommand{\VThreeContribution}{the pre-registered result: neither prediction F nor outcome C held, so the per-cell results are the finding (Opus \faOpus\% false acceptance against \retOpus\% retention, \pairCnoCctlOpus\% paired accuracy on C-no/C-ctl);}
+
+\newcommand{\VThreeOutcomes}{\paragraph{Pre-registered outcomes.}
+Neither registered outcome held. Prediction F held for \nFloorBreakClaude{} of the \nClaude{} Claude models in the panel (Haiku: \floorBreakHaiku{}; Opus: \floorBreakOpus{}): in no cell where the issuer lacks the power did acceptance have a \floorBreakConf\% Wilson lower bound above \floorBreakLo\%. Outcome C did not hold (\ceilingHolds{}): \fillin{which panel models and cells} fell below \ceilingAcc\% accuracy; the lowest cell was \minAccHaiku\% for Haiku and \minAccOpus\% for Opus. As registered, the per-cell results are then the finding. Sonnet, outside the panel, is scored for neither outcome.}
+
+\newcommand{\VThreeShows}{\paragraph{What the results show.}
+The panel neither broke the pre-registered floor nor reached the ceiling. The shortfall lay in \fillin{cells below the ceiling, and whether the errors were false acceptance (D, R, C-no), applicability (B-out) or refused valid exceptions}; errors in B-out misapply a valid exception and say nothing about authority.}
+
+\newcommand{\VThreeHAll}{The primary contrast held for all \nModels{} panel models after Holm adjustment, so the re-delegation right moved decisions even below the ceiling.}
+\newcommand{\VThreeHSome}{The primary contrast held after Holm adjustment for \fillin{k} of the \nModels{} panel models (\fillin{which}); for the others, a re-delegation effect was not detectable at \nBaseMain{} base scenarios.}
+\newcommand{\VThreeHNone}{The primary contrast held for none of the \nModels{} panel models after Holm adjustment; a re-delegation effect, if present, was below what \nBaseMain{} base scenarios can detect.}
+
+\newcommand{\VThreeImpRise}{In the exploratory implicit-rule arm, acceptance rose without the closed-world sentence in at least one of six unadjusted comparisons (three models, D and C-no), for \fillin{which models} (Opus, explicit minus implicit: \impDiffDOpus{} points in D, \impDiffCnoOpus{} in C-no).}
+\newcommand{\VThreeImpFlat}{In the exploratory implicit-rule arm, acceptance did not rise detectably without the closed-world sentence in any of six unadjusted comparisons (three models, D and C-no) (Opus, explicit minus implicit: \impDiffDOpus{} points in D, \impDiffCnoOpus{} in C-no).}
+
+\newcommand{\VThreeScope}{These findings cover one-hop records, hand-derived labels and a rule the prompt states.}

@@ -1,0 +1,4 @@
+# Exact versions used (Python 3.13, macOS, Nov 2026)
+anthropic==2.9.0
+openai==3.52.0
+matplotlib==3.11.2  # figures only (scripts/07)

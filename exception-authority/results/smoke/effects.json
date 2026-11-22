@@ -1,0 +1,1238 @@
+{
+  "models": {
+    "scripted-accept": {
+      "applicability (B-out)": [
+        1.0,
+        6
+      ],
+      "by_direction": {
+        "permissive": {
+          "applicability (B-out)": [
+            1.0,
+            3
+          ],
+          "false acceptance (D, R, C-no)": [
+            1.0,
+            9
+          ],
+          "genuine retention (B-in, R-ctl, C-ok, C-ctl)": [
+            1.0,
+            12
+          ],
+          "rates": {
+            "A": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "B-in": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "B-out": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "C-ctl": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "C-no": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "C-ok": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "D": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "R": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "R-ctl": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ]
+          }
+        },
+        "restrictive": {
+          "applicability (B-out)": [
+            1.0,
+            3
+          ],
+          "false acceptance (D, R, C-no)": [
+            1.0,
+            9
+          ],
+          "genuine retention (B-in, R-ctl, C-ok, C-ctl)": [
+            1.0,
+            12
+          ],
+          "rates": {
+            "A": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "B-in": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "B-out": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "C-ctl": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "C-no": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "C-ok": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "D": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "R": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "R-ctl": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ]
+          }
+        }
+      },
+      "contrasts": {
+        "B-in - A": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "B-in - B-out": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "family": "secondary",
+          "holm_p": 1.0,
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "B-in - D": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "B-in - R": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "B-in - R-ctl": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "C-ctl - C-no": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "family": "primary",
+          "holm_p": 1.0,
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "C-ok - C-ctl": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "C-ok - C-no": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "family": "secondary",
+          "holm_p": 1.0,
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "D - A": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "family": "secondary",
+          "holm_p": 1.0,
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "R-ctl - R": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "family": "secondary",
+          "holm_p": 1.0,
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        }
+      },
+      "false acceptance (D, R, C-no)": [
+        1.0,
+        18
+      ],
+      "genuine retention (B-in, R-ctl, C-ok, C-ctl)": [
+        1.0,
+        24
+      ],
+      "paired_accuracy": {
+        "B-out / B-in": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "C-no / C-ctl": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "C-no / C-ok": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "R / R-ctl": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ]
+      },
+      "paired_patterns": {
+        "B-out / B-in": {
+          "accept B-in only": 0,
+          "accept B-out only": 0,
+          "accept both": 6,
+          "accept neither": 0,
+          "n": 6
+        },
+        "C-no / C-ctl": {
+          "accept C-ctl only": 0,
+          "accept C-no only": 0,
+          "accept both": 6,
+          "accept neither": 0,
+          "n": 6
+        },
+        "C-no / C-ok": {
+          "accept C-no only": 0,
+          "accept C-ok only": 0,
+          "accept both": 6,
+          "accept neither": 0,
+          "n": 6
+        },
+        "R / R-ctl": {
+          "accept R only": 0,
+          "accept R-ctl only": 0,
+          "accept both": 6,
+          "accept neither": 0,
+          "n": 6
+        }
+      },
+      "rates": {
+        "A": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "B-in": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "B-out": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "C-ctl": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "C-no": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "C-ok": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "D": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "R": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "R-ctl": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ]
+      },
+      "share (D - A) / (B-in - A)": [
+        NaN,
+        NaN,
+        NaN
+      ]
+    },
+    "scripted-garbage": {
+      "applicability (B-out)": [
+        NaN,
+        0
+      ],
+      "by_direction": {},
+      "contrasts": {},
+      "false acceptance (D, R, C-no)": [
+        NaN,
+        0
+      ],
+      "genuine retention (B-in, R-ctl, C-ok, C-ctl)": [
+        NaN,
+        0
+      ],
+      "paired_accuracy": {},
+      "paired_patterns": {},
+      "rates": {}
+    },
+    "scripted-gold": {
+      "applicability (B-out)": [
+        0.0,
+        6
+      ],
+      "by_direction": {
+        "permissive": {
+          "applicability (B-out)": [
+            0.0,
+            3
+          ],
+          "false acceptance (D, R, C-no)": [
+            0.0,
+            9
+          ],
+          "genuine retention (B-in, R-ctl, C-ok, C-ctl)": [
+            1.0,
+            12
+          ],
+          "rates": {
+            "A": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "B-in": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "B-out": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "C-ctl": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "C-no": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "C-ok": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "D": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "R": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "R-ctl": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ]
+          }
+        },
+        "restrictive": {
+          "applicability (B-out)": [
+            0.0,
+            3
+          ],
+          "false acceptance (D, R, C-no)": [
+            0.0,
+            9
+          ],
+          "genuine retention (B-in, R-ctl, C-ok, C-ctl)": [
+            1.0,
+            12
+          ],
+          "rates": {
+            "A": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "B-in": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "B-out": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "C-ctl": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "C-no": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "C-ok": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ],
+            "D": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "R": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "R-ctl": [
+              1.0,
+              0.43849391955098227,
+              1.0,
+              3
+            ]
+          }
+        }
+      },
+      "contrasts": {
+        "B-in - A": {
+          "estimate": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mcnemar_p": 0.03125,
+          "n": 6,
+          "only_first": 6,
+          "only_second": 0
+        },
+        "B-in - B-out": {
+          "estimate": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "family": "secondary",
+          "holm_p": 0.375,
+          "mcnemar_p": 0.03125,
+          "n": 6,
+          "only_first": 6,
+          "only_second": 0
+        },
+        "B-in - D": {
+          "estimate": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mcnemar_p": 0.03125,
+          "n": 6,
+          "only_first": 6,
+          "only_second": 0
+        },
+        "B-in - R": {
+          "estimate": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mcnemar_p": 0.03125,
+          "n": 6,
+          "only_first": 6,
+          "only_second": 0
+        },
+        "B-in - R-ctl": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "C-ctl - C-no": {
+          "estimate": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "family": "primary",
+          "holm_p": 0.09375,
+          "mcnemar_p": 0.03125,
+          "n": 6,
+          "only_first": 6,
+          "only_second": 0
+        },
+        "C-ok - C-ctl": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "C-ok - C-no": {
+          "estimate": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "family": "secondary",
+          "holm_p": 0.375,
+          "mcnemar_p": 0.03125,
+          "n": 6,
+          "only_first": 6,
+          "only_second": 0
+        },
+        "D - A": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "family": "secondary",
+          "holm_p": 1.0,
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "R-ctl - R": {
+          "estimate": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "family": "secondary",
+          "holm_p": 0.375,
+          "mcnemar_p": 0.03125,
+          "n": 6,
+          "only_first": 6,
+          "only_second": 0
+        }
+      },
+      "false acceptance (D, R, C-no)": [
+        0.0,
+        18
+      ],
+      "genuine retention (B-in, R-ctl, C-ok, C-ctl)": [
+        1.0,
+        24
+      ],
+      "paired_accuracy": {
+        "B-out / B-in": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "C-no / C-ctl": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "C-no / C-ok": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "R / R-ctl": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ]
+      },
+      "paired_patterns": {
+        "B-out / B-in": {
+          "accept B-in only": 6,
+          "accept B-out only": 0,
+          "accept both": 0,
+          "accept neither": 0,
+          "n": 6
+        },
+        "C-no / C-ctl": {
+          "accept C-ctl only": 6,
+          "accept C-no only": 0,
+          "accept both": 0,
+          "accept neither": 0,
+          "n": 6
+        },
+        "C-no / C-ok": {
+          "accept C-no only": 0,
+          "accept C-ok only": 6,
+          "accept both": 0,
+          "accept neither": 0,
+          "n": 6
+        },
+        "R / R-ctl": {
+          "accept R only": 0,
+          "accept R-ctl only": 6,
+          "accept both": 0,
+          "accept neither": 0,
+          "n": 6
+        }
+      },
+      "rates": {
+        "A": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "B-in": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "B-out": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "C-ctl": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "C-no": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "C-ok": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ],
+        "D": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "R": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "R-ctl": [
+          1.0,
+          0.6096569663469354,
+          0.9999999999999999,
+          6
+        ]
+      },
+      "share (D - A) / (B-in - A)": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "scripted-never": {
+      "applicability (B-out)": [
+        0.0,
+        6
+      ],
+      "by_direction": {
+        "permissive": {
+          "applicability (B-out)": [
+            0.0,
+            3
+          ],
+          "false acceptance (D, R, C-no)": [
+            0.0,
+            9
+          ],
+          "genuine retention (B-in, R-ctl, C-ok, C-ctl)": [
+            0.0,
+            12
+          ],
+          "rates": {
+            "A": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "B-in": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "B-out": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "C-ctl": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "C-no": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "C-ok": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "D": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "R": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "R-ctl": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ]
+          }
+        },
+        "restrictive": {
+          "applicability (B-out)": [
+            0.0,
+            3
+          ],
+          "false acceptance (D, R, C-no)": [
+            0.0,
+            9
+          ],
+          "genuine retention (B-in, R-ctl, C-ok, C-ctl)": [
+            0.0,
+            12
+          ],
+          "rates": {
+            "A": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "B-in": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "B-out": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "C-ctl": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "C-no": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "C-ok": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "D": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "R": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ],
+            "R-ctl": [
+              0.0,
+              0.0,
+              0.5615060804490177,
+              3
+            ]
+          }
+        }
+      },
+      "contrasts": {
+        "B-in - A": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "B-in - B-out": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "family": "secondary",
+          "holm_p": 1.0,
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "B-in - D": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "B-in - R": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "B-in - R-ctl": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "C-ctl - C-no": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "family": "primary",
+          "holm_p": 1.0,
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "C-ok - C-ctl": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "C-ok - C-no": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "family": "secondary",
+          "holm_p": 1.0,
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "D - A": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "family": "secondary",
+          "holm_p": 1.0,
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        },
+        "R-ctl - R": {
+          "estimate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "family": "secondary",
+          "holm_p": 1.0,
+          "mcnemar_p": 1.0,
+          "n": 6,
+          "only_first": 0,
+          "only_second": 0
+        }
+      },
+      "false acceptance (D, R, C-no)": [
+        0.0,
+        18
+      ],
+      "genuine retention (B-in, R-ctl, C-ok, C-ctl)": [
+        0.0,
+        24
+      ],
+      "paired_accuracy": {
+        "B-out / B-in": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "C-no / C-ctl": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "C-no / C-ok": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "R / R-ctl": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ]
+      },
+      "paired_patterns": {
+        "B-out / B-in": {
+          "accept B-in only": 0,
+          "accept B-out only": 0,
+          "accept both": 0,
+          "accept neither": 6,
+          "n": 6
+        },
+        "C-no / C-ctl": {
+          "accept C-ctl only": 0,
+          "accept C-no only": 0,
+          "accept both": 0,
+          "accept neither": 6,
+          "n": 6
+        },
+        "C-no / C-ok": {
+          "accept C-no only": 0,
+          "accept C-ok only": 0,
+          "accept both": 0,
+          "accept neither": 6,
+          "n": 6
+        },
+        "R / R-ctl": {
+          "accept R only": 0,
+          "accept R-ctl only": 0,
+          "accept both": 0,
+          "accept neither": 6,
+          "n": 6
+        }
+      },
+      "rates": {
+        "A": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "B-in": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "B-out": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "C-ctl": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "C-no": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "C-ok": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "D": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "R": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ],
+        "R-ctl": [
+          0.0,
+          0.0,
+          0.3903430336530645,
+          6
+        ]
+      },
+      "share (D - A) / (B-in - A)": [
+        NaN,
+        NaN,
+        NaN
+      ]
+    }
+  },
+  "n_rows": {
+    "scripted-accept": 54,
+    "scripted-garbage": 54,
+    "scripted-gold": 54,
+    "scripted-never": 54
+  },
+  "outcomes": {
+    "ceiling": false,
+    "floor_break": {
+      "scripted-accept": true,
+      "scripted-garbage": false,
+      "scripted-gold": false,
+      "scripted-never": false
+    },
+    "min_cell_accuracy": {
+      "scripted-accept": 0.0,
+      "scripted-garbage": NaN,
+      "scripted-gold": 1.0,
+      "scripted-never": 0.0
+    }
+  },
+  "outside_panel": [],
+  "panel": [
+    "scripted-accept",
+    "scripted-garbage",
+    "scripted-gold",
+    "scripted-never"
+  ],
+  "reliability": {},
+  "stage": "smoke"
+}

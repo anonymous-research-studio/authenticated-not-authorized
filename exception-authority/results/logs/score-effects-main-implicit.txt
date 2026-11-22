@@ -1,0 +1,62 @@
+main-implicit: exploratory (PREREG section 4b); unadjusted, acceptance only
+claude-haiku-5-5:
+  acceptance per cell: A 0.883 [0.814, 0.929] n=120, D 0.883 [0.814, 0.929] n=120, B-in 1.000 [0.969, 1.000] n=120, B-out 0.008 [0.001, 0.046] n=120, R 0.000 [-0.000, 0.031] n=120, R-ctl 1.000 [0.969, 1.000] n=120, C-ok 1.000 [0.969, 1.000] n=120, C-no 0.000 [-0.000, 0.031] n=120, C-ctl 1.000 [0.969, 1.000] n=120
+  C-ctl - C-no: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  R-ctl - R: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  B-in - B-out: +0.992 [95% bootstrap +0.975, +1.000], n=120; discordant 119 vs 0, exact McNemar p = 3.009e-36
+  explicit - implicit, A: -0.642 [95% bootstrap -0.725, -0.558], n=120; discordant 0 vs 77, exact McNemar p = 1.323e-23
+  explicit - implicit, D: -0.850 [95% bootstrap -0.908, -0.783], n=120; discordant 0 vs 102, exact McNemar p = 3.944e-31
+  explicit - implicit, B-in: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, B-out: -0.008 [95% bootstrap -0.025, +0.000], n=120; discordant 0 vs 1, exact McNemar p = 1
+  explicit - implicit, R: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, R-ctl: -0.025 [95% bootstrap -0.058, +0.000], n=120; discordant 0 vs 3, exact McNemar p = 0.25
+  explicit - implicit, C-ok: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, C-no: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, C-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  permissive: acceptance (D, R, C-no) 0.256 (n=180); acceptance (B-out) 0.000 (n=60); acceptance (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  restrictive: acceptance (D, R, C-no) 0.333 (n=180); acceptance (B-out) 0.017 (n=60); acceptance (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  pattern C-no / C-ctl: n 120, accept C-ctl only 120, accept C-no only 0, accept both 0, accept neither 0
+  pattern C-no / C-ok: n 120, accept C-ok only 120, accept C-no only 0, accept both 0, accept neither 0
+  pattern R / R-ctl: n 120, accept R-ctl only 120, accept R only 0, accept both 0, accept neither 0
+  pattern B-out / B-in: n 120, accept B-in only 119, accept B-out only 0, accept both 1, accept neither 0
+claude-opus-5-5:
+  acceptance per cell: A 0.358 [0.278, 0.447] n=120, D 0.217 [0.152, 0.299] n=120, B-in 1.000 [0.969, 1.000] n=120, B-out 0.000 [-0.000, 0.031] n=120, R 0.000 [-0.000, 0.031] n=120, R-ctl 1.000 [0.969, 1.000] n=120, C-ok 1.000 [0.969, 1.000] n=120, C-no 0.000 [-0.000, 0.031] n=120, C-ctl 1.000 [0.969, 1.000] n=120
+  C-ctl - C-no: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  R-ctl - R: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  B-in - B-out: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  explicit - implicit, A: -0.358 [95% bootstrap -0.442, -0.275], n=120; discordant 0 vs 43, exact McNemar p = 2.274e-13
+  explicit - implicit, D: -0.217 [95% bootstrap -0.292, -0.142], n=120; discordant 0 vs 26, exact McNemar p = 2.98e-08
+  explicit - implicit, B-in: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, B-out: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, R: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, R-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, C-ok: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, C-no: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, C-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  permissive: acceptance (D, R, C-no) 0.011 (n=180); acceptance (B-out) 0.000 (n=60); acceptance (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  restrictive: acceptance (D, R, C-no) 0.133 (n=180); acceptance (B-out) 0.000 (n=60); acceptance (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  pattern C-no / C-ctl: n 120, accept C-ctl only 120, accept C-no only 0, accept both 0, accept neither 0
+  pattern C-no / C-ok: n 120, accept C-ok only 120, accept C-no only 0, accept both 0, accept neither 0
+  pattern R / R-ctl: n 120, accept R-ctl only 120, accept R only 0, accept both 0, accept neither 0
+  pattern B-out / B-in: n 120, accept B-in only 120, accept B-out only 0, accept both 0, accept neither 0
+claude-sonnet-5-5:
+  acceptance per cell: A 0.808 [0.729, 0.869] n=120, D 0.675 [0.587, 0.752] n=120, B-in 1.000 [0.969, 1.000] n=120, B-out 0.000 [-0.000, 0.031] n=120, R 0.000 [-0.000, 0.031] n=120, R-ctl 1.000 [0.969, 1.000] n=120, C-ok 1.000 [0.969, 1.000] n=120, C-no 0.000 [-0.000, 0.031] n=120, C-ctl 1.000 [0.969, 1.000] n=120
+  C-ctl - C-no: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  R-ctl - R: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  B-in - B-out: +1.000 [95% bootstrap +1.000, +1.000], n=120; discordant 120 vs 0, exact McNemar p = 1.505e-36
+  explicit - implicit, A: -0.517 [95% bootstrap -0.608, -0.425], n=120; discordant 0 vs 62, exact McNemar p = 4.337e-19
+  explicit - implicit, D: -0.675 [95% bootstrap -0.758, -0.592], n=120; discordant 0 vs 81, exact McNemar p = 8.272e-25
+  explicit - implicit, B-in: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, B-out: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, R: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, R-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, C-ok: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  explicit - implicit, C-no: +0.008 [95% bootstrap +0.000, +0.025], n=120; discordant 1 vs 0, exact McNemar p = 1
+  explicit - implicit, C-ctl: +0.000 [95% bootstrap +0.000, +0.000], n=120; discordant 0 vs 0, exact McNemar p = 1
+  permissive: acceptance (D, R, C-no) 0.150 (n=180); acceptance (B-out) 0.000 (n=60); acceptance (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  restrictive: acceptance (D, R, C-no) 0.300 (n=180); acceptance (B-out) 0.000 (n=60); acceptance (B-in, R-ctl, C-ok, C-ctl) 1.000 (n=240)
+  pattern C-no / C-ctl: n 120, accept C-ctl only 120, accept C-no only 0, accept both 0, accept neither 0
+  pattern C-no / C-ok: n 120, accept C-ok only 120, accept C-no only 0, accept both 0, accept neither 0
+  pattern R / R-ctl: n 120, accept R-ctl only 120, accept R only 0, accept both 0, accept neither 0
+  pattern B-out / B-in: n 120, accept B-in only 120, accept B-out only 0, accept both 0, accept neither 0
+wrote results/main-implicit/effects.json

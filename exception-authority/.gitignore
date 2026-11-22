@@ -1,0 +1,8 @@
+# API keys (read by the runner from .env or the shell); never committed, never exported
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/

@@ -1,0 +1,297 @@
+{
+  "_notes": [
+    "Prices: USD per million tokens, from https://platform.claude.com/docs/en/about-claude/pricing.md, read 16 Nov 2026. Haiku 5.5's price applies to prompts up to 100,000 tokens; every prompt here is under 1,000.",
+    "effort and thinking: every Claude model at effort medium (the default for Opus 5.5 and Haiku 5.5; Sonnet 5.5 defaults to high and is set to medium so models are not compared at different efforts). Thinking is adaptive for all three and sent as thinking: {type: adaptive}; Opus 5.5 cannot disable it. Thinking tokens bill as output and count toward max_tokens. claude-opus-5-5-high is a separate configuration, outside H1 and prediction F.",
+    "max_tokens bounds the worst case of one request; the guard reserves that worst case before sending. A reply that hits it is logged as truncated, not scored.",
+    "scripted models send nothing and cost nothing; scripted-paid carries fake prices so the tests can exercise the spending cap.",
+    "Stages run in order: smoke (free) -> check -> pilot (go/no-go, not pooled) -> main. Within a stage, run the cheapest model first so a harness bug shows before the expensive model is paid for.",
+    "Cross-vendor panel (17 Nov 2026): Claude models sit near zero on forged-authority compliance in two recent studies (arXiv:2608.28502 v2, multi-turn experiments: 0 attack successes in 14,613 trials for 8 Anthropic models; arXiv:2611.04086: Sonnet/Opus 5.5 crossed in 0/100), so the panel adds four non-Anthropic models through OpenRouter, including gpt-4.1-mini, an older model that arXiv:2608.28502 v1 calls provenance-indiscriminate.",
+    "OpenRouter prices: model-level listing, read from the OpenRouter API on 16 Nov 2026 (llama-3.3-70b: the listing price, above the DeepInfra endpoint's $0.10/$0.32, so estimates err high). Hosts: openai and llama are pinned with fallbacks off; gemini and qwen are not yet pinned. After the check stage, pin each to the host recorded in served_by, before the freeze.",
+    "Sampling: non-Anthropic models run at temperature 0, seed 0; the check runs their items twice to test whether a host honors it. Claude models reject non-default sampling, so they run at default sampling and are not deterministic: main and main-implicit run 3 samples per item for each Claude model; sample 1 is the confirmatory data and samples 2-3 are reported only as reliability (PREREG section 4).",
+    "Reasoning (OpenRouter listing, read 17 Nov 2026): gemini-3.5-flash-lite reasoning is mandatory (on by default, default effort minimal, cannot be disabled), so it is fixed at effort minimal; qwen3.8-flash reasoning is on by default but optional, so it is turned off with effort none; gpt-4.1-mini and llama-3.3-70b do not reason.",
+    "feed_protocol: 'prefill' sends the policy-feed lookup as a prefilled tool call in one request. 'model_call' is the fallback (PREREG section 2): call 1 lets the model call the lookup tool itself, call 2 returns its blocks unchanged plus the fixed tool result. Switching requires regenerating the scenarios (the lookup sentence is added to every system prompt) and the runner refuses a mismatch.",
+    "Prompt caching (Claude, main and main-implicit only): cache prices from https://platform.claude.com/docs/en/about-claude/pricing.md, read 17 Nov 2026: 5-minute cache write / cache read per million tokens: Opus 5.5 $5 / $0.20, Sonnet 5.5 $2.50 / $0.10 (reads 0.05x input), Haiku 5.5 $0.125 / $0.01 (prompts up to 100,000 tokens). One breakpoint on the tool_result block caches the whole request; sample 1 writes, samples 2-3 read. Caching is a stage setting, not a model setting, so it is not in the settings hash; per https://platform.claude.com/docs/en/build-with-claude/prompt-caching.md (read 17 Nov 2026) it has no effect on outputs. OpenRouter models: not applicable (requests of about 380 tokens are below every documented minimum, or the host does not cache)."
+  ],
+  "feed_protocol": "prefill",
+  "models": {
+    "claude-haiku-5-5": {
+      "provider": "anthropic",
+      "model_id": "claude-haiku-5-5",
+      "effort": "medium",
+      "max_tokens": 4000,
+      "price_in": 0.1,
+      "price_out": 0.5,
+      "thinking": "adaptive",
+      "price_cache_write": 0.125,
+      "price_cache_read": 0.01
+    },
+    "claude-sonnet-5-5": {
+      "provider": "anthropic",
+      "model_id": "claude-sonnet-5-5",
+      "effort": "medium",
+      "max_tokens": 4000,
+      "price_in": 2.0,
+      "price_out": 10.0,
+      "thinking": "adaptive",
+      "price_cache_write": 2.5,
+      "price_cache_read": 0.1
+    },
+    "claude-opus-5-5": {
+      "provider": "anthropic",
+      "model_id": "claude-opus-5-5",
+      "effort": "medium",
+      "max_tokens": 4000,
+      "price_in": 4.0,
+      "price_out": 20.0,
+      "thinking": "adaptive",
+      "price_cache_write": 5.0,
+      "price_cache_read": 0.2
+    },
+    "gpt-4.1-mini": {
+      "provider": "openai_compatible",
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "temperature": 0,
+      "seed": 0,
+      "max_tokens": 4000,
+      "model_id": "openai/gpt-4.1-mini",
+      "price_in": 0.4,
+      "price_out": 1.6,
+      "extra_body": {
+        "provider": {
+          "order": [
+            "openai"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        }
+      }
+    },
+    "gemini-3.5-flash-lite": {
+      "provider": "openai_compatible",
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "temperature": 0,
+      "seed": 0,
+      "max_tokens": 4000,
+      "model_id": "google/gemini-3.5-flash-lite",
+      "price_in": 0.3,
+      "price_out": 2.5,
+      "extra_body": {
+        "provider": {
+          "order": [
+            "google-ai-studio"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "reasoning": {
+          "effort": "minimal"
+        }
+      }
+    },
+    "qwen3.8-flash": {
+      "provider": "openai_compatible",
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "temperature": 0,
+      "seed": 0,
+      "max_tokens": 4000,
+      "model_id": "qwen/qwen3.8-flash",
+      "price_in": 0.15,
+      "price_out": 0.47,
+      "extra_body": {
+        "provider": {
+          "order": [
+            "alibaba"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "reasoning": {
+          "effort": "none"
+        }
+      }
+    },
+    "llama-3.3-70b": {
+      "provider": "openai_compatible",
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "temperature": 0,
+      "seed": 0,
+      "max_tokens": 4000,
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "price_in": 0.71,
+      "price_out": 0.71,
+      "extra_body": {
+        "provider": {
+          "order": [
+            "deepinfra"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        }
+      }
+    },
+    "scripted-gold": {
+      "provider": "scripted",
+      "policy": "gold"
+    },
+    "scripted-accept": {
+      "provider": "scripted",
+      "policy": "accept"
+    },
+    "scripted-never": {
+      "provider": "scripted",
+      "policy": "never"
+    },
+    "scripted-garbage": {
+      "provider": "scripted",
+      "policy": "garbage"
+    },
+    "scripted-paid": {
+      "provider": "scripted",
+      "policy": "gold",
+      "max_tokens": 4000,
+      "price_in": 1000.0,
+      "price_out": 1000.0
+    },
+    "claude-opus-5-5-high": {
+      "provider": "anthropic",
+      "model_id": "claude-opus-5-5",
+      "effort": "high",
+      "max_tokens": 4000,
+      "price_in": 4.0,
+      "price_out": 20.0,
+      "thinking": "adaptive",
+      "note": "Separate configuration (PREREG section 2): Opus 5.5 at effort high. Run only if credits allow; reported outside H1's Holm family and outside prediction F.",
+      "price_cache_write": 5.0,
+      "price_cache_read": 0.2
+    }
+  },
+  "stages": {
+    "smoke": {
+      "scenarios": "check",
+      "models": [
+        "scripted-gold",
+        "scripted-accept",
+        "scripted-never",
+        "scripted-garbage"
+      ],
+      "frozen": false,
+      "purpose": "Harness check with scripted models. No API calls."
+    },
+    "check": {
+      "scenarios": "check",
+      "models": [
+        "llama-3.3-70b",
+        "qwen3.8-flash",
+        "claude-haiku-5-5",
+        "gemini-3.5-flash-lite",
+        "gpt-4.1-mini",
+        "claude-sonnet-5-5",
+        "claude-opus-5-5"
+      ],
+      "frozen": false,
+      "purpose": "One scenario per domain x direction on real models (54 items each; Sonnet is here only so the panel decision can use its health and token counts). Looks for request errors, rejected parameters, refusals, truncation, parse failures, served hosts and token counts, not effects. Not study data.",
+      "samples": {
+        "llama-3.3-70b": 2,
+        "qwen3.8-flash": 2,
+        "gemini-3.5-flash-lite": 2,
+        "gpt-4.1-mini": 2
+      }
+    },
+    "check-implicit": {
+      "scenarios": "check-implicit",
+      "models": [
+        "claude-haiku-5-5",
+        "claude-sonnet-5-5",
+        "claude-opus-5-5"
+      ],
+      "frozen": false,
+      "exploratory": true,
+      "purpose": "Protocol check for the implicit-rule arm (54 items each, Anthropic models only). Same checks as 'check'; not data."
+    },
+    "cache-test": {
+      "scenarios": "check",
+      "models": [
+        "claude-haiku-5-5"
+      ],
+      "frozen": false,
+      "cache": true,
+      "samples": {
+        "claude-haiku-5-5": 3
+      },
+      "purpose": "Not data: one item x 3 samples on Haiku to confirm that sample 1 writes the prompt cache and samples 2-3 read it."
+    },
+    "pin-test": {
+      "scenarios": "check",
+      "models": [
+        "gemini-3.5-flash-lite",
+        "qwen3.8-flash"
+      ],
+      "frozen": false,
+      "purpose": "Not data: one item per newly pinned model (Gemini on google-ai-studio, Qwen on alibaba) to confirm that the pinned host accepts and serves the request before the freeze."
+    },
+    "pilot": {
+      "scenarios": "pilot",
+      "models": [
+        "llama-3.3-70b",
+        "qwen3.8-flash",
+        "claude-haiku-5-5",
+        "gemini-3.5-flash-lite",
+        "gpt-4.1-mini",
+        "claude-sonnet-5-5",
+        "claude-opus-5-5"
+      ],
+      "frozen": true,
+      "purpose": "Pre-registered go/no-go (PREREG.md section 5). Not pooled into the main analysis."
+    },
+    "main": {
+      "scenarios": "main",
+      "models": [
+        "llama-3.3-70b",
+        "qwen3.8-flash",
+        "claude-haiku-5-5",
+        "gemini-3.5-flash-lite",
+        "gpt-4.1-mini",
+        "claude-sonnet-5-5",
+        "claude-opus-5-5"
+      ],
+      "frozen": true,
+      "purpose": "The reported study (PREREG.md sections 3-4). claude-sonnet-5-5 runs here but is reported outside H1's Holm family and prediction F (outside_panel; PREREG section 2).",
+      "samples": {
+        "claude-haiku-5-5": 3,
+        "claude-sonnet-5-5": 3,
+        "claude-opus-5-5": 3,
+        "claude-opus-5-5-high": 3
+      },
+      "cache": true,
+      "outside_panel": [
+        "claude-sonnet-5-5"
+      ]
+    },
+    "main-implicit": {
+      "scenarios": "main-implicit",
+      "models": [
+        "claude-haiku-5-5",
+        "claude-sonnet-5-5",
+        "claude-opus-5-5"
+      ],
+      "frozen": true,
+      "exploratory": true,
+      "pairs_with": "main",
+      "purpose": "Exploratory implicit-rule arm (PREREG section 4b): main items minus the closed-world sentence, for models that passed the pilot. Acceptance and paired differences only; no accuracy, no Holm, no F or C.",
+      "samples": {
+        "claude-haiku-5-5": 3,
+        "claude-sonnet-5-5": 3,
+        "claude-opus-5-5": 3,
+        "claude-opus-5-5-high": 3
+      },
+      "cache": true,
+      "outside_panel": [
+        "claude-sonnet-5-5"
+      ]
+    }
+  }
+}

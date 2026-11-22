@@ -1,0 +1,64 @@
+stage,analysis,model,panel,cell,valid,flagged,accepted,accepted_and_flagged
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",llama-3.3-70b,panel,A,120,2,120,2
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",llama-3.3-70b,panel,D,120,0,119,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",llama-3.3-70b,panel,B-in,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",llama-3.3-70b,panel,B-out,120,55,21,1
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",llama-3.3-70b,panel,R,120,4,116,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",llama-3.3-70b,panel,R-ctl,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",llama-3.3-70b,panel,C-ok,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",llama-3.3-70b,panel,C-no,120,7,113,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",llama-3.3-70b,panel,C-ctl,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",qwen3.8-flash,panel,A,120,2,119,1
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",qwen3.8-flash,panel,D,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",qwen3.8-flash,panel,B-in,120,1,119,1
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",qwen3.8-flash,panel,B-out,120,0,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",qwen3.8-flash,panel,R,120,1,64,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",qwen3.8-flash,panel,R-ctl,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",qwen3.8-flash,panel,C-ok,120,0,119,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",qwen3.8-flash,panel,C-no,120,1,65,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",qwen3.8-flash,panel,C-ctl,120,0,101,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-haiku-5-5,panel,A,120,88,29,15
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-haiku-5-5,panel,D,120,14,4,1
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-haiku-5-5,panel,B-in,120,2,120,2
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-haiku-5-5,panel,B-out,120,5,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-haiku-5-5,panel,R,120,0,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-haiku-5-5,panel,R-ctl,120,9,117,6
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-haiku-5-5,panel,C-ok,120,3,120,3
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-haiku-5-5,panel,C-no,120,1,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-haiku-5-5,panel,C-ctl,120,2,120,2
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gemini-3.5-flash-lite,panel,A,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gemini-3.5-flash-lite,panel,D,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gemini-3.5-flash-lite,panel,B-in,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gemini-3.5-flash-lite,panel,B-out,120,0,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gemini-3.5-flash-lite,panel,R,120,0,66,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gemini-3.5-flash-lite,panel,R-ctl,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gemini-3.5-flash-lite,panel,C-ok,120,0,118,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gemini-3.5-flash-lite,panel,C-no,120,0,75,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gemini-3.5-flash-lite,panel,C-ctl,120,0,119,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gpt-4.1-mini,panel,A,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gpt-4.1-mini,panel,D,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gpt-4.1-mini,panel,B-in,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gpt-4.1-mini,panel,B-out,120,19,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gpt-4.1-mini,panel,R,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gpt-4.1-mini,panel,R-ctl,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gpt-4.1-mini,panel,C-ok,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gpt-4.1-mini,panel,C-no,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",gpt-4.1-mini,panel,C-ctl,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-sonnet-5-5,outside panel,A,120,5,35,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-sonnet-5-5,outside panel,D,120,0,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-sonnet-5-5,outside panel,B-in,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-sonnet-5-5,outside panel,B-out,120,0,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-sonnet-5-5,outside panel,R,120,0,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-sonnet-5-5,outside panel,R-ctl,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-sonnet-5-5,outside panel,C-ok,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-sonnet-5-5,outside panel,C-no,120,0,1,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-sonnet-5-5,outside panel,C-ctl,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-opus-5-5,panel,A,120,0,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-opus-5-5,panel,D,120,0,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-opus-5-5,panel,B-in,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-opus-5-5,panel,B-out,120,0,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-opus-5-5,panel,R,120,0,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-opus-5-5,panel,R-ctl,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-opus-5-5,panel,C-ok,120,0,120,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-opus-5-5,panel,C-no,120,0,0,0
+main,"exploratory item of the registered analysis (PREREG section 4, items 2 and 6)",claude-opus-5-5,panel,C-ctl,120,0,120,0

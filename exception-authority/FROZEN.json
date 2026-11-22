@@ -1,0 +1,13 @@
+{
+  "frozen_at": "2026-11-17T22:10:35Z",
+  "files": {
+    "src/exception_authority/scenarios.py": "b185bd004f6fb5e34140d95f7527c19d41a87520ecc7362906204baa8306ce7c",
+    "src/exception_authority/derive.py": "2352b89c70d3b0d14de0c463a1da47416f3b224d9ec3074f517da270c537c51a",
+    "src/exception_authority/runner.py": "d2def1ec149dbf9680c0bd9423a3fa6d92aa95fe605a5adbd611a4eacfcfb333",
+    "src/exception_authority/guard.py": "386556109d542bb4c5a1a5bf26f600b3ea9a550c73a7d599137602e317fcc096",
+    "src/exception_authority/scoring.py": "fc501be5148f9ff3e0e2e84bbaeb2209f45c69023a445e1b0a20d6461bf91df4",
+    "resources/scenarios.jsonl": "9844dc6c77ae23976f1abe26549a42975ab4873d834b8f7eb0121ca3ec4f39af",
+    "resources/config.json": "1dc0b6e424fa0f7e396ccd2fee787bc5d81150778535bc22fa942c59dee99f8e",
+    "../PREREG.md": "dcfecba7e221ad820f9fb9ab431543d74b0b5400c309a8662e361ba885cf935c"
+  }
+}

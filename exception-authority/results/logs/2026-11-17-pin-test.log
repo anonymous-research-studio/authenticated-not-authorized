@@ -1,0 +1,30 @@
+# Output of: 02_run_stage.py pin-test --limit 1 --max-cost 0.05 --yes, then 04_health_check.py pin-test (17 Nov 2026). Not data. 'missing 53/54' is the --limit 1 run; the repository prefix is replaced by '.'.
+stage pin-test: Not data: one item per newly pinned model (Gemini on google-ai-studio, Qwen on alibaba) to confirm that the pinned host accepts and serves the request before the freeze.
+feed protocol: prefill
+gemini-3.5-flash-lite: 0 done, 1 to run
+qwen3.8-flash: 0 done, 1 to run
+model                 items  est. $/item  worst $/item  est. total  basis
+gemini-3.5-flash-lite      1      0.00014       0.01058       $0.00  mean of 108 logged rows
+qwen3.8-flash             1      0.00005       0.00216       $0.00  mean of 108 logged rows
+estimated spend: $0.00   worst case if every reply hit max_tokens: $0.01   hard cap: $0.05
+gemini-3.5-flash-lite: running 1 requests (1 items) with 4 workers
+gemini-3.5-flash-lite: 1 ok, 0 errors, 0 not started; 329 tokens in, 14 out, about $0.0001
+qwen3.8-flash: running 1 requests (1 items) with 4 workers
+qwen3.8-flash: 1 ok, 0 errors, 0 not started; 275 tokens in, 13 out, about $0.0000
+spend this command: about $0.0002 of a $0.05 cap (ledger: ./results/spend-ledger.jsonl)
+next: python scripts/04_health_check.py pin-test
+run exit 0
+gemini-3.5-flash-lite: 1/54 done, 0 error lines logged, $0.0001
+  tokens in: median 329, max 329; out: median 14, max 14
+  served model(s): google/gemini-3.5-flash-lite (1)
+  missing 53, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/1
+qwen3.8-flash: 1/54 done, 0 error lines logged, $0.0000
+  tokens in: median 275, max 275; out: median 13, max 13
+  served model(s): qwen/qwen3.8-flash (1)
+  missing 53, refusal 0, truncated 0, unparsed 0, served_mismatch 0, host_mismatch 0, no_lookup 0
+  clarification_required true: 0/1
+PROBLEMS:
+  gemini-3.5-flash-lite: missing 53/54 (limit 0%)
+  qwen3.8-flash: missing 53/54 (limit 0%)
+health exit 1
